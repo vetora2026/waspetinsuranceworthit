@@ -7,11 +7,10 @@ on:
   workflow_dispatch: # Allow manual trigger for test-firing
 
 jobs:
-  validate:
+validate:
     runs-on: ubuntu-latest
-	permissions:
-  	    issues: write
-
+    permissions:
+      issues: write
     steps:
       - uses: actions/checkout@v4
 
