@@ -3,14 +3,121 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="About & Methodology — WasPetInsuranceWorthIt.com"
-  description="How we calculate whether pet insurance was worth it. Our methodology, data sources, and assumptions explained."
+  title="How This Calculator Works — WasPetInsuranceWorthIt.com"
+  description="Full methodology, data sources, and assumptions behind the pet insurance worth-it calculator."
 >
-  <h1 class="text-3xl font-bold mb-4">About & Methodology</h1>
-  <p class="text-gray-600 text-lg">
-    This calculator uses real premium data from NAPHIA (North American Pet Health Insurance Association)
-    and actual veterinary cost benchmarks to give you an honest, data-driven answer about whether
-    pet insurance made financial sense for your pet. Our methodology and data sources are fully
-    transparent and updated every six months.
-  </p>
+  <article class="prose prose-gray max-w-none">
+    <h1>How This Calculator Works</h1>
+
+    <h2>Data Sources</h2>
+    <ul>
+      <li>
+        <strong>Primary dataset:</strong> 50,000 pets, 210,235 claims (2018–2020). This is a publicly
+        available academic research dataset — see{' '}
+        <a href="https://github.com/stevenrhart/predicting-claims" target="_blank" rel="noopener noreferrer">
+          stevenrhart/predicting-claims
+        </a>{' '}
+        on GitHub. We use only derived aggregate statistics (means, medians, percentiles by breed and age
+        group), never raw individual pet data.
+      </li>
+      <li>
+        <strong>Industry baselines:</strong> Premium averages and loss ratios from the{' '}
+        <a href="https://naphia.org" target="_blank" rel="noopener noreferrer">
+          NAPHIA 2024 State of the Industry Report
+        </a>. Average annual premiums: $749.29 (dogs), $386.47 (cats). Industry loss ratio: 72%.
+      </li>
+      <li>
+        <strong>Procedure costs:</strong> Typical cost ranges from CareCredit published averages
+        and Pumpkin Insurance claims data.
+      </li>
+      <li>
+        <strong>Breed information:</strong> Dog breeds from the American Kennel Club (AKC). Cat breeds
+        from the Cat Fanciers' Association (CFA).
+      </li>
+    </ul>
+
+    <h2>What We Calculate</h2>
+    <p>
+      We estimate what you <em>would have paid in premiums</em> based on your pet's breed, age, and
+      years owned — using NAPHIA's national averages adjusted for age (younger pets pay less; older
+      pets pay more). We apply an 8% upward adjustment to bring 2018–2020 dataset premiums in line
+      with 2024 levels.
+    </p>
+    <p>
+      We estimate what insurance <em>would have reimbursed</em> based on your reported vet spending.
+      Routine and wellness care is excluded — almost no accident-and-illness policy covers it. We
+      apply a standard policy structure to the remaining claimable spend:
+    </p>
+    <ul>
+      <li>Annual deductible: $500</li>
+      <li>Reimbursement rate: 80%</li>
+      <li>Annual limit: $15,000</li>
+      <li>No wellness rider</li>
+    </ul>
+    <p>
+      The difference between estimated reimbursements and estimated premiums is your net result.
+      Positive means insurance would have paid more than it cost. Negative means you would have
+      come out ahead by self-insuring.
+    </p>
+
+    <h2>Important Caveats</h2>
+    <ul>
+      <li>
+        <strong>This is a retrospective estimate, not a quote.</strong> Actual premiums vary by
+        carrier, location, and your pet's specific health history.
+      </li>
+      <li>
+        <strong>Pre-existing conditions.</strong> All policies exclude pre-existing conditions. This
+        calculator cannot account for what would have been excluded for your specific pet — which means
+        for some pets, the actual reimbursements would be lower than our estimate.
+      </li>
+      <li>
+        <strong>Dataset timeframe.</strong> The dataset reflects 2018–2020 claims. Veterinary costs
+        have increased since then. We apply a 1.08× adjustment factor to premiums, but absolute cost
+        comparisons should be taken as directional.
+      </li>
+      <li>
+        <strong>Limited breed data.</strong> For breeds with fewer than 30 pets in the dataset at a
+        given age range, we use species-wide averages and flag this in the results. Percentile
+        comparisons for these breeds are rough estimates.
+      </li>
+      <li>
+        <strong>Dataset loss ratios.</strong> The dataset shows anomalously high internal loss ratios
+        (reflecting the structure of the research sample, not the industry). We use NAPHIA's 72%
+        industry figure — derived from real premium and claims data across millions of policies — for
+        all industry-level statements. The dataset is used only for breed and age patterns.
+      </li>
+    </ul>
+
+    <h2>Why This Tool Exists</h2>
+    <p>
+      Most pet insurance calculators online are built by insurance companies or affiliate marketers.
+      They're designed to sell you a policy, not give you an honest answer.
+    </p>
+    <p>
+      This tool will sometimes tell you insurance wasn't worth it — because for many pets, that's
+      the truth. The industry-wide loss ratio of 72% means the average policyholder receives back
+      less than they pay in. That doesn't mean insurance is never worth it: high-cost breeds and
+      unlucky pets can see enormous returns from coverage. But the decision deserves honest math,
+      not a funnel.
+    </p>
+
+    <h2>Data Attribution</h2>
+    <ul>
+      <li>
+        Primary dataset:{' '}
+        <a href="https://github.com/stevenrhart/predicting-claims" target="_blank" rel="noopener noreferrer">
+          github.com/stevenrhart/predicting-claims
+        </a>{' '}
+        (Steven R. Hart, 2020)
+      </li>
+      <li>
+        Industry data:{' '}
+        <a href="https://naphia.org" target="_blank" rel="noopener noreferrer">
+          naphia.org
+        </a>{' '}
+        — 2024 State of the Industry Report
+      </li>
+    </ul>
+  </article>
 </BaseLayout>

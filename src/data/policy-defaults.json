@@ -1,1 +1,10 @@
-{}
+{
+  "annualDeductible": 500,
+  "reimbursementRate": 0.80,
+  "annualLimit": 15000,
+  "wellnessCovered": false,
+  "elderlyThresholds": {
+    "dog": 13,
+    "cat": 15
+  }
+}

@@ -1,1 +1,1887 @@
-[]
+{
+  "dogs": [
+    {
+      "name": "Affenpinscher",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Afghan Hound",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Aidi",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Airedale Terrier",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Akbash Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Akita",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Alaskan Klee Kai",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Alaskan Malamute",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "American Bandogge Mastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "American Black And Tan Coonhound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Bulldog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Bully",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Cocker Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American English Coonhound",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "American Eskimo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Eskimo Dog",
+      "lifeExpectancy": 14,
+      "size": "Medium"
+    },
+    {
+      "name": "American Foxhound",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "American Hairless Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Mastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "American Pitbull Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Staffordshire Bull Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Staffordshire Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "American Water Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Anatolian Shepherd",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Anatolian Shepherd Dog",
+      "lifeExpectancy": 13,
+      "size": "Giant"
+    },
+    {
+      "name": "Anatolian/Karabash Shepherd",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Appenzeller Sennenhunde",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Argentine Dogo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Aussalier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Aussiedoodle",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Australian Cattle Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Australian Cattle Dog/Blue Heeler",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Australian Cattle Dog/Red Heeler",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Australian Kelpie",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Australian Labradoodle",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Australian Shepherd",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Australian Silky Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Australian Stumpy Tail Cattle",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Australian Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Bantam Bulldog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Barbet",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Basenji",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Basset Fauve De Bretagne",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Basset Hound",
+      "lifeExpectancy": 12,
+      "size": "Medium"
+    },
+    {
+      "name": "Bavarian Mountain Hound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Beagle",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Bearded Collie",
+      "lifeExpectancy": 14,
+      "size": "Large"
+    },
+    {
+      "name": "Beauceron",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Bedlington Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Belgian Malinois",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Belgian Sheepdog",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Belgian Tervuren",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Bergamasco Sheepdog",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Berger Picard/Picardy Sheepdog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Bernedoodle",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Bernese Mountain Dog",
+      "lifeExpectancy": 9,
+      "size": "Giant"
+    },
+    {
+      "name": "Bichon Frise",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Biewer",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Black And Tan Coonhound",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Black Russian Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Blackmouth Cur",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Bloodhound",
+      "lifeExpectancy": 10,
+      "size": "Large"
+    },
+    {
+      "name": "Blue Tick Coonhound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Bluetick Coonhound",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Boerboel",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Bolognese",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Border Collie",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Border Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Borzoi",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Borzoi/Russian Wolfhound",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Boston Terrier",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Bouvier Des Flandres",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Boxer",
+      "lifeExpectancy": 11,
+      "size": "Large"
+    },
+    {
+      "name": "Boykin Spaniel",
+      "lifeExpectancy": 14,
+      "size": "Medium"
+    },
+    {
+      "name": "Bracco Italiano",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Briard",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Brittany",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Brittany Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Brussels Griffon",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Bull Boxer",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Bull Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Bulldog",
+      "lifeExpectancy": 10,
+      "size": "Medium"
+    },
+    {
+      "name": "Bullmastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Cairn Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Canaan Dog",
+      "lifeExpectancy": 14,
+      "size": "Medium"
+    },
+    {
+      "name": "Canary",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Cane Corso",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Cardigan Welsh Corgi",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Catahoula Cur/Leopard Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Caucasian Ovcharka",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Cavalier King Charles Spaniel",
+      "lifeExpectancy": 12,
+      "size": "Small"
+    },
+    {
+      "name": "Cavapoo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Central Asian Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Cesky Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Chesapeake Bay Retriever",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Chihuahua",
+      "lifeExpectancy": 15,
+      "size": "Small"
+    },
+    {
+      "name": "Chinese Crested",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Chinese Shar-Pei",
+      "lifeExpectancy": 11,
+      "size": "Large"
+    },
+    {
+      "name": "Chipom",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Chipoo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Chow Chow",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Cirneco Dell'Etna",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Clumber Spaniel",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Cobber Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Cockapoo",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Cocker Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Collie",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Coonhound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Coton De Tulear",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Curly-Coated Retriever",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Dachshund",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Dalmatian",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Dandie Dinmont Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Dingo/Carolina",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Doberman Pinscher",
+      "lifeExpectancy": 11,
+      "size": "Large"
+    },
+    {
+      "name": "Dogue De Bordeaux",
+      "lifeExpectancy": 8,
+      "size": "Giant"
+    },
+    {
+      "name": "Double Doodle",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Doxiepoo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Drever",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Dutch Sheepdog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Dutch Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "English Bulldog",
+      "lifeExpectancy": 10,
+      "size": "Medium"
+    },
+    {
+      "name": "English Cocker Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "English Foxhound",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "English Mastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "English Setter",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "English Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "English Springer Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "English Toy Spaniel",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Entlebucher Mountain Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Eurasian/Eurasier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Feist",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Field Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Fila Brasileiro/Brazillian Mastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Finnish Lapphund",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Finnish Spitz",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Flat-Coated Retriever",
+      "lifeExpectancy": 11,
+      "size": "Large"
+    },
+    {
+      "name": "Formosan Mountain Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Fox Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "French Bulldog",
+      "lifeExpectancy": 11,
+      "size": "Small"
+    },
+    {
+      "name": "Frenchton",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Ganaraskan",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "German Pinscher",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "German Shepherd",
+      "lifeExpectancy": 11,
+      "size": "Large"
+    },
+    {
+      "name": "German Shepherd Dog",
+      "lifeExpectancy": 11,
+      "size": "Large"
+    },
+    {
+      "name": "German Shorthaired Pointer",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "German Spitz",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "German Wirehaired Pointer",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Giant Schnauzer",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Glen Of Imaal Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Golden Retriever",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Goldendoodle",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Gordon Setter",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Great Dane",
+      "lifeExpectancy": 9,
+      "size": "Giant"
+    },
+    {
+      "name": "Great Pyrenees",
+      "lifeExpectancy": 12,
+      "size": "Giant"
+    },
+    {
+      "name": "Greater Swiss Mountain Dog",
+      "lifeExpectancy": 11,
+      "size": "Giant"
+    },
+    {
+      "name": "Greyhound",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Harrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Havana Silk",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Havanese",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Hovawart",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Ibizan Hound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Icelandic Sheepdog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Irish Red And White Setter",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Irish Setter",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Irish Terrier",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Irish Water Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Irish Wolfhound",
+      "lifeExpectancy": 8,
+      "size": "Giant"
+    },
+    {
+      "name": "Italian Greyhound",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Jack Russell Terrier",
+      "lifeExpectancy": 16,
+      "size": "Small"
+    },
+    {
+      "name": "Japanese Chin",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Japanese Spitz",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Kai Ken",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Karelian Bear Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Keeshond",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Kerry Blue Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Komondor",
+      "lifeExpectancy": 12,
+      "size": "Giant"
+    },
+    {
+      "name": "Kooikerhondje",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Korean Jindo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Kuvasz",
+      "lifeExpectancy": 12,
+      "size": "Giant"
+    },
+    {
+      "name": "Labradoodle",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Labrador Retriever",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Lagotto Romagnolo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Lakeland Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Landseer",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Large Munsterlander",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Leonberger",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Lhasa Apso",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Long Haired Chihuahua",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Lowchen",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Malinois Belgian Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Maltese",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Maltipoo",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Manchester Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Maremma",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Mastiff",
+      "lifeExpectancy": 9,
+      "size": "Giant"
+    },
+    {
+      "name": "Mexican Hairless",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Mi-Ki",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Miniature American Shepherd",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Australian Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Miniature Bull Terrier",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Goldendoodle",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Miniature Labradoodle",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Long Haired Dachshund",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Pinscher",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Poodle",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Schnauzer",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Smooth Haired Dachshund",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Miniature Wire Haired Dachshund",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Mixed Breed",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Morkie",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Mountain Cur",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Mudi",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Native American Indian",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Neapolitan Mastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Newfoundland",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Norfolk Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Northern Inuit",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Norwegian Buhund",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Norwegian Elkhound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Norwich Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Nova Scotia Duck Tolling Retriever",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Old Boston Bulldogge",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Old English Mastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Old English Sheepdog",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Old Victorian Bulldogge",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Olde English Bulldog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Otterhound",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Papillon",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Parson Russell Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Patterdale/Fell Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Peekapoo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pekingese",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Pembroke Welsh Corgi",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Perro De Presa Canario",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Peruvian Inca Orchid",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Petit Basset Griffon Vendeen",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Pharaoh Hound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Plott",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pointer",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Polish Lowland Sheepdog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pomapoo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pomeranian",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Pomsky",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Poochon",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Poodle",
+      "lifeExpectancy": 14,
+      "size": "Large"
+    },
+    {
+      "name": "Poodle-Miniature",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Poodle-Standard",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Poodle-Toy",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Porkie",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Portuguese Podengo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Portuguese Water",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Portuguese Water Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Prague Ratter",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pudelpointer",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Pug",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Puggle",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Puli",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pumi",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pyrenean Mountain Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Pyrenean Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Pyrenees Braque Francais",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Rat Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Redbone Coonhound",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Rhodesian Ridgeback",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Rottweiler",
+      "lifeExpectancy": 10,
+      "size": "Large"
+    },
+    {
+      "name": "Rough Collie",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Russian Bolonka",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Saint Bernard",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Saluki",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Samoyed",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Schipperke",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Schnoodle",
+      "lifeExpectancy": 14,
+      "size": "Medium"
+    },
+    {
+      "name": "Scottish Deerhound",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Scottish Terrier",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Scottish/Aberdeen Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Sealyham Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Shar Pei",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Sheepadoodle",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Shetland Sheepdog",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Shiba Inu",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Shih Tzu",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Shihpoo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Shikoku",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Shiloh Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Siberian Husky",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Silken Windhound",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Silky Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Skye Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Small Munsterlander",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Smooth Collie",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Smooth Fox Terrier",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Snoodle",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Soft Coated Wheaten Terrier",
+      "lifeExpectancy": 14,
+      "size": "Medium"
+    },
+    {
+      "name": "Spanish Mastiff",
+      "lifeExpectancy": 10,
+      "size": "Giant"
+    },
+    {
+      "name": "Spanish Water Dog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Spinone Italiano",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Springer Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "St. Johns Waterdog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Stabyhoun",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Staffordshire Bull Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Standard Bull Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Standard Long Haired Dachshund",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Standard Poodle",
+      "lifeExpectancy": 14,
+      "size": "Large"
+    },
+    {
+      "name": "Standard Schnauzer",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Standard Smooth Haired Dachshund",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Standard Wire Haired Dachshund",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Sussex Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Swedish Vallhund",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Terrier",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Terripoo",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Tervuren Belgian Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Texas Blue Lacey",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Tibetan Mastiff",
+      "lifeExpectancy": 12,
+      "size": "Giant"
+    },
+    {
+      "name": "Tibetan Spaniel",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Tibetan Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Tosa",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Toy Australian Shepherd",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Toy Fox Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Toy Manchester Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Toy Poodle",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Treeing Walker Coonhound",
+      "lifeExpectancy": 13,
+      "size": "Large"
+    },
+    {
+      "name": "Victorian Bulldog",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Vizsla",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Weimaraner",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Welsh Springer Spaniel",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Welsh Terrier",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "West Highland White Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Whippet",
+      "lifeExpectancy": 14,
+      "size": "Medium"
+    },
+    {
+      "name": "Wire Fox Terrier",
+      "lifeExpectancy": 13,
+      "size": "Small"
+    },
+    {
+      "name": "Wirehair Vizsla",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Wirehaired Pointing Griffon",
+      "lifeExpectancy": 12,
+      "size": "Large"
+    },
+    {
+      "name": "Wirehaired Vizsla",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    },
+    {
+      "name": "Xoloitzcuintli",
+      "lifeExpectancy": 14,
+      "size": "Medium"
+    },
+    {
+      "name": "Yorkiepoo",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Yorkshire Terrier",
+      "lifeExpectancy": 14,
+      "size": "Small"
+    },
+    {
+      "name": "Mixed Breed / Unknown",
+      "lifeExpectancy": 13,
+      "size": "Medium"
+    }
+  ],
+  "cats": [
+    {
+      "name": "Abyssinian",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "American Bobtail",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "American Curl",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "American Shorthair",
+      "lifeExpectancy": 15
+    },
+    {
+      "name": "American Wirehair",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Balinese",
+      "lifeExpectancy": 15
+    },
+    {
+      "name": "Bengal",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Birman",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Bombay",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "British Shorthair",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Burmese",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Burmilla",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Chartreux",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Colorpoint Shorthair",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Cornish Rex",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Devon Rex",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Domestic Longhair",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Domestic Shorthair",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Egyptian Mau",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "European Burmese",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Exotic Shorthair",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Havana Brown",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Japanese Bobtail",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Javanese",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Khao Manee",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Korat",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Kurilian Bobtail",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "LaPerm",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Lykoi",
+      "lifeExpectancy": 12
+    },
+    {
+      "name": "Maine Coon",
+      "lifeExpectancy": 13
+    },
+    {
+      "name": "Manx",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Mixed/Unknown",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Norwegian Forest Cat",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Ocicat",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Oriental",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Persian",
+      "lifeExpectancy": 13
+    },
+    {
+      "name": "Ragamuffin",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Ragdoll",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Russian Blue",
+      "lifeExpectancy": 15
+    },
+    {
+      "name": "Scottish Fold",
+      "lifeExpectancy": 13
+    },
+    {
+      "name": "Selkirk Rex",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Siamese",
+      "lifeExpectancy": 15
+    },
+    {
+      "name": "Siberian",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Singapura",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Somali",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Sphynx",
+      "lifeExpectancy": 13
+    },
+    {
+      "name": "Tonkinese",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Turkish Angora",
+      "lifeExpectancy": 14
+    },
+    {
+      "name": "Turkish Van",
+      "lifeExpectancy": 14
+    }
+  ]
+}

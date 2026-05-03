@@ -1,1 +1,22 @@
-{}
+{
+  "dog": {
+    "aclSurgery":           { "low": 3000, "mid": 4500,  "high": 6500  },
+    "foreignBodyRemoval":   { "low": 1500, "mid": 3000,  "high": 5000  },
+    "cancerTreatment":      { "low": 5000, "mid": 10000, "high": 20000 },
+    "dentalCleaning":       { "low": 300,  "mid": 700,   "high": 1200  },
+    "emergencyVisit":       { "low": 500,  "mid": 1500,  "high": 3000  },
+    "hipDysplasia":         { "low": 3500, "mid": 5000,  "high": 7000  },
+    "bloat":                { "low": 2000, "mid": 5000,  "high": 8000  },
+    "allergySkinCondition": { "low": 500,  "mid": 1500,  "high": 3000  }
+  },
+  "cat": {
+    "urinaryBlockage":      { "low": 1500, "mid": 3000,  "high": 6000  },
+    "dentalExtraction":     { "low": 500,  "mid": 1200,  "high": 2500  },
+    "cancerTreatment":      { "low": 3000, "mid": 7000,  "high": 15000 },
+    "kidneyDisease":        { "low": 2000, "mid": 5000,  "high": 10000 },
+    "emergencyVisit":       { "low": 500,  "mid": 1200,  "high": 2500  },
+    "diabetesManagement":   { "low": 1000, "mid": 3000,  "high": 5000  },
+    "hyperthyroidism":      { "low": 500,  "mid": 1500,  "high": 3000  },
+    "foreignBodyRemoval":   { "low": 1500, "mid": 3000,  "high": 5000  }
+  }
+}

@@ -1,14 +1,85 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Calculator from '../components/Calculator';
 ---
 
 <BaseLayout
-  title="Was Pet Insurance Worth It? Calculator"
-  description="Find out honestly whether pet insurance would have been worth it for your specific pet. Enter your pet's history and get a real answer."
+  title="Was Pet Insurance Worth It? — Honest Calculator"
+  description="Find out whether pet insurance was worth it for your specific pet. Uses data from 50,000 real pets and 210,000 claims. No sales pitch — just honest math."
 >
-  <h1 class="text-3xl font-bold mb-4">Was Pet Insurance Worth It? Calculator</h1>
-  <p class="text-gray-600 text-lg">
-    Enter your pet's details, premiums paid, and vet bills to find out whether pet insurance
-    would have been worth it for your specific situation. Honest math, no sales pitch.
-  </p>
+  <!-- Hero -->
+  <section class="mb-10">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight" style="color:#1A1A1A;">
+      Was Pet Insurance Worth It?
+    </h1>
+
+    <!-- PCP Framework: two data points, no editorializing -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="rounded-xl border border-gray-200 bg-white p-4">
+        <p class="text-3xl font-bold" style="color:#1B6B6D;">$749<span class="text-lg font-normal text-gray-500">/yr</span></p>
+        <p class="text-sm text-gray-600 mt-1">Average annual premium for dog owners (accident &amp; illness coverage)</p>
+        <p class="text-xs text-gray-400 mt-1">NAPHIA 2024</p>
+      </div>
+      <div class="rounded-xl border border-gray-200 bg-white p-4">
+        <p class="text-3xl font-bold" style="color:#D4943A;">72¢</p>
+        <p class="text-sm text-gray-600 mt-1">Paid back in claims for every $1.00 collected in premiums, industry-wide</p>
+        <p class="text-xs text-gray-400 mt-1">NAPHIA 2024 loss ratio</p>
+      </div>
+    </div>
+
+    <p class="text-gray-600 text-base leading-relaxed max-w-2xl">
+      Whether insurance made sense for <em>your</em> pet depends on breed, age, and what actually
+      happened at the vet. This calculator uses data from 50,000 real pets and 210,000 claims to
+      show you the math.
+    </p>
+  </section>
+
+  <!-- Calculator -->
+  <Calculator client:load />
+
+  <!-- FAQ -->
+  <section class="mt-16 space-y-3">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
+
+    {[
+      {
+        q: "How accurate is this calculator?",
+        a: "It's a retrospective estimate, not a quote. We use industry-average premiums from NAPHIA and adjust for breed and age. Actual premiums vary by carrier, location, and your pet's health history. Treat the result as a directional answer, not an exact figure.",
+      },
+      {
+        q: "Why does it sometimes say insurance wasn't worth it?",
+        a: "Because for many pets, it isn't. The industry-wide loss ratio of 72% means the average policyholder gets back less than they pay in. Most pet insurance calculators are built by insurance companies or affiliate marketers — they're designed to sell you a policy. This tool isn't.",
+      },
+      {
+        q: "What policy assumptions do you use?",
+        a: "$500 annual deductible, 80% reimbursement rate, $15,000 annual limit, no wellness rider. These are the most common standard terms. Routine and wellness care is excluded from our calculations — almost no accident-and-illness policies cover it.",
+      },
+      {
+        q: "Where does the data come from?",
+        a: "Primary dataset: 50,000 pets, 210,235 claims (2018–2020), publicly available research dataset from stevenrhart/predicting-claims. Industry baselines from the NAPHIA 2024 State of the Industry Report.",
+      },
+      {
+        q: "Should I get pet insurance?",
+        a: "That depends on your financial situation and your pet's breed risk profile. Insurance makes the most sense if: (1) you can't absorb a $5,000–$10,000 emergency bill out of pocket, (2) your breed has known high-cost conditions, and (3) your pet is young enough to get a reasonable premium. For older pets or financially resilient owners with low-risk breeds, self-insuring is often the better math.",
+      },
+    ].map((item) => (
+      <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+        <summary class="flex justify-between items-center px-5 py-4 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors list-none">
+          {item.q}
+          <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+          {item.a}
+        </div>
+      </details>
+    ))}
+  </section>
+
+  <div class="mt-10 text-center">
+    <a href="/about" class="text-sm font-medium hover:underline" style="color:#1B6B6D;">
+      Read our full methodology →
+    </a>
+  </div>
 </BaseLayout>

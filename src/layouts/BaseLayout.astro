@@ -28,26 +28,63 @@ const canonicalURL = Astro.url;
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5806594895991752" crossorigin="anonymous"></script>
   </head>
-  <body class="min-h-screen flex flex-col bg-white text-gray-900">
-    <header class="border-b border-gray-200 py-4 px-6">
-      <a href="/" class="text-xl font-bold text-blue-700 hover:text-blue-900">
-        WasPetInsuranceWorthIt.com
-      </a>
+  <body class="min-h-screen flex flex-col" style="background:#FAFAF7; color:#1A1A1A; font-family:system-ui,-apple-system,sans-serif;">
+
+    <!-- Sticky header -->
+    <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+        <a href="/" class="font-bold text-base sm:text-lg hover:opacity-80 transition-opacity" style="color:#1B6B6D;">
+          WasPetInsuranceWorthIt.com
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-gray-600">
+          <a href="/" class="hover:text-gray-900 transition-colors">Calculator</a>
+          <a href="/about" class="hover:text-gray-900 transition-colors">Methodology</a>
+          <a href="/privacy" class="hover:text-gray-900 transition-colors">Privacy</a>
+        </nav>
+
+        <!-- Mobile nav toggle -->
+        <button
+          id="mobile-menu-btn"
+          class="sm:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+          aria-label="Toggle menu"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-100 bg-white px-4 py-3">
+        <nav class="flex flex-col gap-3 text-sm font-medium text-gray-700">
+          <a href="/" class="hover:text-gray-900">Calculator</a>
+          <a href="/about" class="hover:text-gray-900">Methodology</a>
+          <a href="/privacy" class="hover:text-gray-900">Privacy</a>
+        </nav>
+      </div>
     </header>
 
-    <main class="flex-1 px-6 py-8 max-w-4xl mx-auto w-full">
+    <main class="flex-1 px-4 sm:px-6 py-8 max-w-4xl mx-auto w-full">
       <slot />
     </main>
 
-    <footer class="border-t border-gray-200 py-6 px-6 text-sm text-gray-500">
-      <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between gap-2">
+    <footer class="border-t border-gray-200 py-6 px-4 sm:px-6 text-sm text-gray-500 mt-12">
+      <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between gap-3">
         <span>&copy; 2026 WasPetInsuranceWorthIt.com</span>
-        <nav class="flex gap-4">
-          <a href="/about" class="hover:text-gray-800">About</a>
-          <a href="/privacy" class="hover:text-gray-800">Privacy</a>
+        <nav class="flex flex-wrap gap-4">
+          <a href="/about" class="hover:text-gray-800">About &amp; Methodology</a>
+          <a href="/privacy" class="hover:text-gray-800">Privacy Policy</a>
           <span><!--email_off-->contact@waspetinsuranceworthit.com<!--/email_off--></span>
         </nav>
       </div>
     </footer>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+    </script>
   </body>
 </html>
