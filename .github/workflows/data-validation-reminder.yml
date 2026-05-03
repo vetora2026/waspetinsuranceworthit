@@ -1,0 +1,47 @@
+name: Data Validation Check
+
+on:
+  schedule:
+    # Runs at 9 AM UTC on the 1st of April and October (every 6 months)
+    - cron: '0 9 1 4,10 *'
+  workflow_dispatch: # Allow manual trigger for test-firing
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check NAPHIA premium baselines
+        run: |
+          echo "=== 6-Month Data Validation Check ==="
+          echo ""
+          echo "Manual checks required:"
+          echo "1. Visit https://naphia.org — check if new State of Industry report released"
+          echo "   Current stored values:"
+          echo "   - Dog A&I avg premium: \$749.29/yr (NAPHIA 2024)"
+          echo "   - Cat A&I avg premium: \$386.47/yr (NAPHIA 2024)"
+          echo "   - Industry loss ratio: ~72%"
+          echo ""
+          echo "2. Visit https://www.carecredit.com/vetmed/ — spot-check procedure costs"
+          echo "   - ACL surgery, dental cleaning, emergency visit costs"
+          echo ""
+          echo "3. Check CFA breed list at https://cfa.org/breeds/ for any new breeds added"
+          echo ""
+          echo "4. Check AKC breed list at https://www.akc.org/dog-breeds/ for any new breeds added"
+          echo ""
+          echo "If any values have changed significantly (>10%), update the corresponding JSON files in src/data/"
+          echo ""
+          echo "=== End Check ==="
+
+      - name: Create issue if needed
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Auto] 6-Month Data Validation — ${new Date().toISOString().slice(0,10)}`,
+              body: `## Scheduled Data Validation\n\nThis is an automated reminder to check:\n\n- [ ] NAPHIA premium baselines (dog: $749.29, cat: $386.47)\n- [ ] Industry loss ratio (~72%)\n- [ ] CareCredit procedure cost benchmarks\n- [ ] CFA cat breed list (currently 45 + 3 catch-all)\n- [ ] AKC dog breed list (currently 277)\n\nIf any values changed >10%, update \`src/data/\` JSON files and redeploy.`,
+              labels: ['maintenance', 'data-validation']
+            });

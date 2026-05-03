@@ -1,0 +1,22 @@
+{
+  "name": "waspetinsuranceworthit",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.13",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "3.2.1",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^5.18.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "recharts": "^3.8.1",
+    "tailwindcss": "^4.2.4"
+  }
+}

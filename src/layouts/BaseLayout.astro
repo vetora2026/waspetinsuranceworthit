@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalURL = Astro.url;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5806594895991752" crossorigin="anonymous"></script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white text-gray-900">
+    <header class="border-b border-gray-200 py-4 px-6">
+      <a href="/" class="text-xl font-bold text-blue-700 hover:text-blue-900">
+        WasPetInsuranceWorthIt.com
+      </a>
+    </header>
+
+    <main class="flex-1 px-6 py-8 max-w-4xl mx-auto w-full">
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-200 py-6 px-6 text-sm text-gray-500">
+      <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between gap-2">
+        <span>&copy; 2026 WasPetInsuranceWorthIt.com</span>
+        <nav class="flex gap-4">
+          <a href="/about" class="hover:text-gray-800">About</a>
+          <a href="/privacy" class="hover:text-gray-800">Privacy</a>
+          <span><!--email_off-->contact@waspetinsuranceworthit.com<!--/email_off--></span>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
