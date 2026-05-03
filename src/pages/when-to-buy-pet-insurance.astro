@@ -1,16 +1,401 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When is the best time to buy pet insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best time is when you first get the pet — puppy, kitten, or newly adopted — before any conditions develop or vet visits create pre-existing exclusions. The second-best time is within the first year of ownership, before any significant vet visits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do waiting periods work in pet insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most policies have a 14-day waiting period for illnesses and 0–2 days for accidents. You cannot buy insurance after a diagnosis and use it immediately. If your pet gets sick while you're in the waiting period, that condition will typically be treated as pre-existing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you get pet insurance for an older dog?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most carriers will issue new policies up to age 10–12 for dogs, but premiums are significantly higher and coverage is often more limited. At age 9+ for dogs or 12+ for cats, the premium math rarely works in the owner's favor for new policies. Some carriers impose hard age limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does pet insurance cover pre-existing conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Any condition diagnosed or showing symptoms before your policy start date is permanently excluded. This includes conditions flagged in prior vet records even without a formal diagnosis — recurring symptoms, abnormal bloodwork, or notes about limping can all create exclusions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What age is too old for pet insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no universal cutoff, but practically speaking the math becomes very difficult at age 9+ for dogs and 12+ for cats when purchasing new policies. Premiums can double or triple compared to younger rates, coverage caps tighten, and many prior conditions are excluded. Self-insuring is often the better financial decision at these ages."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
-  title="When to Buy Pet Insurance — WasPetInsuranceWorthIt.com"
-  description="The best time to buy pet insurance, what age matters most, and how breed affects the math. Data-driven guidance."
+  title="When to Buy Pet Insurance: The Age, Breed, and Timing Math (2026)"
+  description="The best time to buy pet insurance depends on breed risk windows, pre-existing condition rules, and premium math. Here's when it makes sense — and when you've missed the window."
 >
-  <h1 class="text-3xl font-bold mb-4">When to Buy Pet Insurance</h1>
-  <p class="text-gray-600 text-lg">
-    Timing matters enormously with pet insurance. Buying before any conditions develop locks
-    in coverage with no pre-existing exclusions, while waiting means higher premiums and
-    potential denials. Learn which life stages and breeds make insurance most likely to pay off,
-    backed by NAPHIA actuarial data.
-  </p>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <article class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4 leading-tight" style="color:#1B6B6D;">
+        When to Buy Pet Insurance
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        The short answer: before your pet needs it. The honest answer: that window is narrower
+        than most people realize, and for some pets, it's already closed. Here's how to
+        read the timing math for your specific breed and age.
+      </p>
+    </header>
+
+    <!-- Section 1 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The pre-existing condition window</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        This is the most important section on this page, and the one most insurance comparison
+        sites skip over. Pet insurance does not cover pre-existing conditions — and the definition
+        of "pre-existing" is broader than most people expect.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Any condition that was diagnosed <em>or showing symptoms</em> before your policy start
+        date is permanently excluded. Not just formally diagnosed — showing symptoms. That means:
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4 text-sm">
+        <li>A vet note saying your dog was limping can exclude orthopedic conditions</li>
+        <li>Recurring ear infections in the medical record can exclude ear disease</li>
+        <li>Elevated kidney values on a routine panel can exclude kidney disease</li>
+        <li>A mention of skin irritation can exclude dermatological conditions</li>
+        <li>Any vague GI complaint can become a GI exclusion</li>
+      </ul>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        When you file a claim, most carriers request complete vet records going back 12–24 months
+        (sometimes further). Claims adjusters look for prior mentions of anything related to the
+        current claim and deny on that basis. This process is standard practice, not bad-faith —
+        it's how insurance maintains actuarial integrity.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The practical implication: the best time to buy insurance is before any significant vet
+        visits. A puppy that has only had vaccines and a wellness exam has a clean record.
+        A 4-year-old dog with routine vet history has 4 years of potential exclusion material.
+      </p>
+
+      <!-- Waiting period callout -->
+      <div class="rounded-xl border border-gray-200 bg-white p-5 mb-2">
+        <p class="font-semibold text-gray-900 mb-2 text-sm">Waiting periods add further delay</p>
+        <div class="grid grid-cols-2 gap-4 text-sm text-gray-700">
+          <div>
+            <p class="font-medium">Illness coverage</p>
+            <p class="text-gray-500">Typically 14-day waiting period</p>
+          </div>
+          <div>
+            <p class="font-medium">Accident coverage</p>
+            <p class="text-gray-500">Typically 0–2 days</p>
+          </div>
+          <div>
+            <p class="font-medium">Orthopedic conditions</p>
+            <p class="text-gray-500">Often 6-month waiting period</p>
+          </div>
+          <div>
+            <p class="font-medium">Cruciate ligament</p>
+            <p class="text-gray-500">Some carriers: 12-month wait</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 mt-3">Waiting periods vary by carrier and state. Confirm before purchase.</p>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Age and the premium curve</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Pet insurance premiums increase with age, and the curve is not linear — it accelerates.
+        Based on NAPHIA 2024 data and carrier pricing patterns:
+      </p>
+
+      <div class="space-y-3 mb-6">
+        <div class="rounded-lg border border-gray-200 bg-white p-4 flex items-start gap-4">
+          <div class="text-center min-w-[80px]">
+            <p class="text-xs text-gray-500 uppercase tracking-wide">Ages 0–1</p>
+            <p class="font-bold text-lg" style="color:#1B6B6D;">Puppy / Kitten</p>
+          </div>
+          <div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Lowest premiums. Broadest coverage. No medical history = no exclusions.
+              Premiums for dogs typically start at $35–$65/month for accident-and-illness.
+              This is the optimal window.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-4 flex items-start gap-4">
+          <div class="text-center min-w-[80px]">
+            <p class="text-xs text-gray-500 uppercase tracking-wide">Ages 2–5</p>
+            <p class="font-bold text-lg" style="color:#1B6B6D;">Young Adult</p>
+          </div>
+          <div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Still affordable. Some conditions may be developing — especially for structural
+              or large breeds. Premiums are 10–30% higher than puppy rates. Still a reasonable
+              time to buy for most breeds.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-4 flex items-start gap-4">
+          <div class="text-center min-w-[80px]">
+            <p class="text-xs text-gray-500 uppercase tracking-wide">Ages 6–8</p>
+            <p class="font-bold text-lg" style="color:#D4943A;">Middle Age</p>
+          </div>
+          <div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Premiums jump 30–60% from puppy rates. Vet records likely contain several
+              visits with potential exclusion flags. Math is harder to justify unless you
+              have a high-risk breed with known upcoming cost windows.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-4 flex items-start gap-4">
+          <div class="text-center min-w-[80px]">
+            <p class="text-xs text-gray-500 uppercase tracking-wide">Ages 9+</p>
+            <p class="font-bold text-lg text-red-600">Senior</p>
+          </div>
+          <div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Premiums can double or triple vs. puppy rates. Coverage caps tighten.
+              Some carriers impose hard age limits (no new policies after age 10 or 12).
+              Many conditions already excluded. New policies at this age rarely pencil out.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed">
+        The compounding math matters: buying at age 0 and paying 12 years costs less per year
+        than buying at age 6 and paying 6 years — and covers far more risk. The policy you'd
+        wish you had bought when your 8-year-old needs a $12,000 surgery is the one you would
+        have bought when they were 8 weeks old.
+      </p>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Breed risk windows</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Different breeds hit their high-cost period at different ages. Matching your buying
+        decision to your breed's risk window changes the analysis significantly.
+      </p>
+
+      <div class="space-y-4">
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Large &amp; giant breeds (Labs, Shepherds, Great Danes)</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-2">
+            Hip dysplasia and joint issues often emerge ages 2–5. Cancer risk peaks at ages 7–10
+            and is the leading cause of death in many large breeds. Buy before age 2 to cover
+            both windows.
+          </p>
+          <p class="text-xs text-gray-500">Typical high-cost events: hip replacement ($5K–$7K/hip), cancer treatment ($5K–$20K), ACL repair ($3K–$6K)</p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Brachycephalic breeds (Frenchies, Bulldogs, Pugs, Boston Terriers)</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-2">
+            Respiratory and structural issues can emerge early — sometimes within the first year.
+            BOAS surgery, spinal issues, and cherry eye are common before age 3. Buy before age 1,
+            ideally at the time of purchase or adoption.
+          </p>
+          <p class="text-xs text-gray-500">Typical high-cost events: BOAS surgery ($3K–$6K), spinal surgery ($4K–$10K), palatoplasty</p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Small dogs (Chihuahuas, Pomeranians, Maltese)</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-2">
+            Lower overall emergency risk than large breeds, but dental disease and luxating patella
+            are common. The premium math is tighter because expected claim costs are lower. If
+            you're buying, do it before age 3. Beyond that, the expected value case gets thin.
+          </p>
+          <p class="text-xs text-gray-500">Typical high-cost events: luxating patella surgery ($1.5K–$3K), dental extractions ($500–$2K), tracheal collapse</p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Cats (all breeds)</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-2">
+            Urinary issues peak ages 2–6, especially in males. Kidney disease and hyperthyroidism
+            emerge around age 7+. Indoor-only cats have lower accident risk but the same disease
+            exposure. Buy before age 2 for highest expected value; buying at 4–5 is still defensible
+            for breeds with known cardiac or kidney predispositions.
+          </p>
+          <p class="text-xs text-gray-500">Typical high-cost events: urinary obstruction ($2K–$5K), kidney disease management, HCM (Maine Coons, Ragdolls)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The "I'll buy it when they get sick" mistake</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        This comes up constantly, and it's worth being direct about why it doesn't work.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        If your pet is currently sick, or just received a diagnosis, pet insurance cannot help you
+        with that specific condition. Pre-existing conditions are excluded. There is no retroactive
+        coverage. Buying a policy after a diagnosis and filing a claim for that diagnosis during the
+        waiting period will result in denial — and the condition will remain excluded for the life
+        of the policy.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Some people buy insurance post-diagnosis hoping to cover future related complications.
+        That's a defensible strategy if other conditions might develop — but the specific condition
+        that prompted the purchase won't be covered.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        This isn't a criticism of how insurers behave. It's how insurance works across every
+        category — you can't buy fire insurance while your house is burning. Pet owners are often
+        surprised by this because the marketing doesn't emphasize it.
+      </p>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">When you've missed the window</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For some pets, insurance is genuinely no longer the right tool. That's okay — there are
+        alternatives.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        If your pet is 10+ years old (dog) or 12+ (cat), has multiple diagnosed conditions, or
+        has already accumulated a medical history that would produce a long exclusion list, buying
+        a new policy rarely makes financial sense. The premiums are high, coverage is limited, and
+        the math doesn't close.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The alternative that makes sense in this situation: self-insure deliberately. Set aside
+        $100–$200 per month in a dedicated savings account earmarked for vet expenses. After
+        12 months, you have $1,200–$2,400 banked. After 24 months, $2,400–$4,800. You earn
+        interest instead of paying premiums. You have no exclusions. And if nothing expensive
+        happens, you keep the money.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Self-insuring has a higher expected value than buying a policy — because you capture
+        the insurer's margin. The tradeoff is that you bear the full risk of a catastrophic early
+        claim before the account builds. If the timing works out badly, a $10,000 surgery in month
+        3 of self-insuring is painful. That's the risk you're taking on.
+      </p>
+    </section>
+
+    <!-- Section 6 — Decision timeline -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The decision timeline</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        A simple framework for where your pet sits:
+      </p>
+
+      <div class="rounded-xl border border-gray-200 bg-white overflow-hidden mb-6">
+        <div class="border-b border-gray-100 p-4">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold px-2 py-0.5 rounded text-white min-w-[100px] text-center" style="background:#1B6B6D;">Best time</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">When you first get the pet</p>
+              <p class="text-gray-500 text-sm">Puppy, kitten, or newly adopted — before any conditions develop or vet visits accumulate</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-b border-gray-100 p-4">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold px-2 py-0.5 rounded text-white min-w-[100px] text-center" style="background:#2D8B8D;">Good time</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">Within the first year</p>
+              <p class="text-gray-500 text-sm">Before the first major vet visit, while the record is still clean</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-b border-gray-100 p-4">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold px-2 py-0.5 rounded text-white min-w-[100px] text-center" style="background:#5AAA8A;">Okay time</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">Ages 2–5 (no significant conditions)</p>
+              <p class="text-gray-500 text-sm">Still worthwhile for most breeds if no expensive conditions yet flagged</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-b border-gray-100 p-4">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold px-2 py-0.5 rounded text-white min-w-[100px] text-center" style="background:#D4943A;">Hard time</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">Ages 6–8 (high-risk breeds)</p>
+              <p class="text-gray-500 text-sm">Premiums are higher; requires known upcoming risk windows to pencil out</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold px-2 py-0.5 rounded text-white min-w-[100px] text-center bg-gray-400">Too late</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">Ages 9+ (new policies)</p>
+              <p class="text-gray-500 text-sm">Premiums too high, coverage too limited, exclusion lists too long for new policies to make financial sense. Self-insure instead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed">
+        Note: if you already have a policy and your pet is older, renewing an existing policy is
+        a different calculation than buying a new one. Renewal keeps your existing coverage terms;
+        a new policy re-underwrites from scratch.
+      </p>
+    </section>
+
+    <!-- CTA box -->
+    <div class="rounded-xl border-2 p-6 mb-10" style="border-color:#1B6B6D; background:#F0F7F7;">
+      <h3 class="font-bold text-lg mb-2" style="color:#1B6B6D;">Not sure where your pet falls?</h3>
+      <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+        The calculator inputs your breed, age, and spending history to show how the math looks
+        for your specific situation — including whether the timing window has passed.
+      </p>
+      <a
+        href="/"
+        class="inline-block font-semibold px-5 py-2.5 rounded-lg text-white text-sm transition-opacity hover:opacity-90"
+        style="background:#1B6B6D;"
+      >
+        Run the numbers for your breed and age →
+      </a>
+    </div>
+
+    <!-- See also -->
+    <div class="rounded-xl border border-gray-200 bg-white p-5 mb-8">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">See also</p>
+      <a href="/is-pet-insurance-worth-it/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+        Is Pet Insurance Worth It? What the Data Actually Shows →
+      </a>
+      <p class="text-sm text-gray-500 mt-1">
+        The broader question of whether insurance makes sense at all — breed risk, the 72% loss
+        ratio, and when self-insuring is the better call.
+      </p>
+    </div>
+
+    <!-- Last updated -->
+    <p class="text-xs text-gray-400 text-right">Last updated: May 2026 · Source: NAPHIA 2024 State of the Industry Report</p>
+
+  </article>
 </BaseLayout>

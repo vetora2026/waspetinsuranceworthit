@@ -1,16 +1,333 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is pet insurance worth it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the average pet, no — the industry pays out about 72 cents per dollar collected in premiums. But averages hide the distribution. For high-risk breeds, young pets, or owners who can't absorb a $5,000+ emergency, insurance can be worth it. The math depends on breed, age, and financial situation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average cost of pet insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "According to NAPHIA 2024 data, the average annual premium is $749 for dogs and $387 for cats. The average payout per policyholder is roughly $539 for dogs and $279 for cats — meaning the average insured pet owner pays more than they receive back."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is pet insurance not worth it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet insurance is generally not worth it for: older pets (age 8+ for dogs) where premiums become very high, low-risk breeds with few genetic predispositions, financially resilient owners who can absorb emergencies, and wellness-only plans which amount to prepaying vet bills with a markup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does breed affect whether pet insurance is worth it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, significantly. French Bulldogs (BOAS surgery $3K-$6K), Golden Retrievers (high cancer rates), Dachshunds (IVDD surgery $3K-$8K), and Maine Coons (HCM) have known expensive genetic conditions that shift the math toward insurance being worthwhile. Mixed breeds and small dogs with few predispositions have a harder time justifying the premium."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a pre-existing condition in pet insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any condition that was diagnosed or showing symptoms before your policy starts is permanently excluded from coverage. This includes things like limping, recurring ear infections, or elevated bloodwork — even without a formal diagnosis. This makes timing of purchase very important."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Is Pet Insurance Worth It? — WasPetInsuranceWorthIt.com"
-  description="Is pet insurance worth it? We break down the real math, average premiums, claim rates, and when insurance pays off versus when it doesn't."
+  title="Is Pet Insurance Worth It? What the Data Actually Shows (2026)"
+  description="The average pet insurance policy pays back 72 cents per dollar. Whether it's worth it for YOUR pet depends on breed, age, and what happens at the vet. Here's the honest math."
 >
-  <h1 class="text-3xl font-bold mb-4">Is Pet Insurance Worth It?</h1>
-  <p class="text-gray-600 text-lg">
-    Whether pet insurance is worth it depends on your pet's breed, age, and health history —
-    and the honest answer is that for many pets, it isn't. The average industry loss ratio
-    means insurers pay out about 72 cents for every dollar collected in premiums. Use our
-    calculator to find out where your pet falls on the spectrum.
-  </p>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <article class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4 leading-tight" style="color:#1B6B6D;">
+        Is Pet Insurance Worth It?
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        For the average pet, no. For some pets, overwhelmingly yes. The industry's own data shows
+        insurers pay back about 72 cents for every dollar collected in premiums — but that average
+        hides a wide distribution. Here's how to tell which group your pet falls into.
+      </p>
+    </header>
+
+    <!-- Section 1 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The industry average says no — but averages lie</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        NAPHIA's 2024 State of the Industry report puts the industry-wide loss ratio at approximately
+        72%. That means for every dollar collected in premiums, insurers pay out $0.72 in claims.
+        The remaining $0.28 covers overhead, administrative costs, and profit. For the average
+        policyholder, this is a losing proposition by design — that's true of all insurance, and
+        it doesn't make insurance bad. It makes insurance insurance.
+      </p>
+
+      <!-- Data comparison card -->
+      <div class="rounded-xl border border-gray-200 bg-white p-6 mb-6">
+        <h3 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wide">NAPHIA 2024 — Industry Averages</h3>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Dogs</p>
+            <p class="text-gray-700 mb-1">Avg annual premium: <strong>$749</strong></p>
+            <p class="text-gray-700 mb-1">Avg annual payout: <strong>~$539</strong></p>
+            <p class="text-sm text-gray-500">Net loss per policyholder: ~$210/yr</p>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Cats</p>
+            <p class="text-gray-700 mb-1">Avg annual premium: <strong>$387</strong></p>
+            <p class="text-gray-700 mb-1">Avg annual payout: <strong>~$279</strong></p>
+            <p class="text-sm text-gray-500">Net loss per policyholder: ~$108/yr</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The gap between premium and payout is the insurer's margin. But the more important insight
+        is in the distribution behind that average. Most policyholders file small claims or none at
+        all. A smaller percentage file enormous claims — ACL tears, cancer treatment, bloat surgery —
+        where insurance covers 80-90% of costs that could easily reach $10,000 to $20,000.
+        Insurance is a bet against that tail risk, not an investment.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        The question isn't "do I get more back than I pay in?" — most people don't, and that's
+        fine. The question is: "if my pet needs $15,000 in surgery, can I handle that?" That's
+        the calculation that actually matters.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">When pet insurance IS worth it</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        There are three scenarios where the math consistently shifts in favor of buying coverage.
+      </p>
+
+      <div class="space-y-6">
+        <div class="rounded-xl border border-gray-200 bg-white p-6">
+          <h3 class="font-bold text-gray-900 mb-2">1. High-risk breeds with known expensive conditions</h3>
+          <p class="text-gray-700 leading-relaxed mb-3">
+            Some breeds are actuarially expensive, and insurers price accordingly — but even at
+            higher premiums, coverage can still make sense when the expected claim size is very large.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+            <li><strong>French Bulldogs &amp; Bulldogs</strong> — BOAS (breathing) surgery: $3,000–$6,000. Spinal issues common.</li>
+            <li><strong>Golden Retrievers</strong> — Cancer diagnosis rates among the highest of any breed. Treatment: $5,000–$20,000.</li>
+            <li><strong>Dachshunds</strong> — IVDD (spinal disc) surgery: $3,000–$8,000. Affects ~25% of the breed.</li>
+            <li><strong>Maine Coons &amp; Ragdolls</strong> — HCM (heart disease) is breed-prevalent. Ongoing cardiology costs.</li>
+            <li><strong>Large/giant breeds</strong> — Hip dysplasia surgery (FHO or THR): $3,500–$7,000 per hip.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-6">
+          <h3 class="font-bold text-gray-900 mb-2">2. Protection against catastrophic single incidents</h3>
+          <p class="text-gray-700 leading-relaxed mb-3">
+            These events don't require a high-risk breed — they happen to any pet. One incident can
+            exceed a decade of premiums.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+            <li>ACL (CCL) tear surgery: $3,000–$6,000 per leg</li>
+            <li>Foreign body ingestion surgery: $2,000–$5,000</li>
+            <li>Bloat / GDV surgery: $2,000–$8,000 (time-sensitive)</li>
+            <li>Cancer treatment (chemotherapy + surgery): $5,000–$20,000</li>
+            <li>Toxin ingestion / emergency hospitalization: $1,500–$5,000</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-6">
+          <h3 class="font-bold text-gray-900 mb-2">3. Young pets with long coverage horizons</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Insuring a puppy or kitten locks in the lowest available premiums before any conditions
+            develop, and covers the entire risk window of the pet's life. A dog insured from age 0
+            to 12 accumulates 12 years of chances for something expensive to happen — and does so
+            at rates far below what a policy would cost if purchased at age 8.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">When pet insurance is NOT worth it</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        This is where most sites go quiet. The honest answer is that insurance is the wrong
+        financial decision for a lot of pets.
+      </p>
+
+      <div class="space-y-4">
+        <div class="border-l-4 pl-5 py-1" style="border-color:#1B6B6D;">
+          <h3 class="font-bold text-gray-900 mb-1">Older pets</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Premiums at age 8+ can exceed $1,200/yr for dogs, and continue climbing. Many carriers
+            impose coverage caps or exclusions that narrow what you can actually claim. For a
+            10-year-old dog with existing conditions, the math rarely closes.
+          </p>
+        </div>
+
+        <div class="border-l-4 pl-5 py-1" style="border-color:#1B6B6D;">
+          <h3 class="font-bold text-gray-900 mb-1">Low-risk breeds with few genetic predispositions</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Mixed breeds and small dogs without major structural or genetic issues have lower average
+            claim costs. A healthy 7-year-old Chihuahua who has never needed expensive care: the
+            retrospective math will almost always show net loss on insurance. That doesn't mean
+            something expensive can't happen — it means the expected value points toward self-insuring.
+          </p>
+        </div>
+
+        <div class="border-l-4 pl-5 py-1" style="border-color:#1B6B6D;">
+          <h3 class="font-bold text-gray-900 mb-1">Financially resilient owners</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            If you can absorb a $5,000–$10,000 emergency without meaningful financial distress,
+            you're effectively self-insuring — and self-insurance has a higher expected value because
+            you keep the insurer's margin. The benefit of buying a policy is peace of mind and
+            liquidity management, not positive expected value.
+          </p>
+        </div>
+
+        <div class="border-l-4 pl-5 py-1" style="border-color:#1B6B6D;">
+          <h3 class="font-bold text-gray-900 mb-1">Wellness-only plans</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Wellness riders add $200–$400/yr to premiums to cover routine care — vaccines,
+            annual exams, flea prevention — that costs roughly the same amount out of pocket.
+            You're prepaying your vet bills with a markup, not transferring risk. Wellness riders
+            are almost never worth adding.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The pre-existing condition trap</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Any condition diagnosed or showing symptoms before your policy starts is permanently
+        excluded from coverage. This is the most important sentence in pet insurance, and it's
+        buried in the fine print of every carrier.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        "Showing symptoms" casts a wide net. Limping at the dog park, a vet note about recurring
+        ear infections, elevated kidney values on a blood panel — even if you never received a
+        formal diagnosis, a claims adjuster reviewing prior vet records can flag these as
+        pre-existing and deny the claim. The condition doesn't have to have a name; it just needs
+        a prior medical record that suggests it was developing.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The practical implication is significant: every vet visit before you buy insurance
+        potentially creates a future exclusion. A dog that develops allergies at age 3 will never
+        have allergy treatment covered, even if you buy a policy at age 4. A cat with a single
+        urinary episode at age 2 may have the entire urinary tract excluded going forward.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        This creates a real "buy early or risk exclusions" dynamic. It also means that buying
+        insurance is partly a bet that something expensive will happen <em>after</em> the policy
+        starts — not just that something expensive is possible.
+      </p>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">How to think about the decision</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Treat this as a financial risk management question, not an emotional one. Four variables
+        do most of the work:
+      </p>
+      <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-6">
+        <li class="leading-relaxed">
+          <strong>What's the largest vet bill you can absorb without financial distress?</strong>
+          If your threshold is $2,000 and a realistic worst case for your breed is $8,000,
+          insurance addresses a real gap. If your threshold is $20,000, the math looks different.
+        </li>
+        <li class="leading-relaxed">
+          <strong>Does your breed have known expensive conditions?</strong>
+          Structural breeds, giant breeds, and several cat breeds have published actuarial data
+          showing elevated claim rates. Your vet can tell you the breed-specific risks they see
+          most often.
+        </li>
+        <li class="leading-relaxed">
+          <strong>How old is your pet, and how many years of premiums are ahead?</strong>
+          A 3-year-old dog has perhaps 10 more years of risk exposure. A 9-year-old dog has maybe
+          4 — and the premiums at year 9 are far higher than at year 3.
+        </li>
+        <li class="leading-relaxed">
+          <strong>Have any conditions already been diagnosed that would be excluded?</strong>
+          Request a list of what would be excluded before buying. Most carriers will provide this
+          after reviewing medical records. If the exclusion list already covers your biggest
+          risks, the policy's effective coverage is much narrower than it appears.
+        </li>
+      </ol>
+      <p class="text-gray-700 leading-relaxed">
+        You can run your own numbers with our calculator — input your pet's breed, age, and
+        spending history and see how the math shakes out specifically for your situation.
+      </p>
+    </section>
+
+    <!-- Section 6 — Closing -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">What we'd tell a friend</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        If you have a young, high-risk breed and a $5,000 emergency would genuinely hurt — buy
+        accident-and-illness coverage now, before anything shows up in the medical record.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        If you have a healthy older mixed breed, solid savings, and the main conditions you'd worry
+        about are already excluded because your vet caught something three years ago — you're
+        probably better off putting $100/month in a dedicated savings account and self-insuring.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        For everyone in between — which is most people — it genuinely depends, and that's not a
+        cop-out. The math varies enough by breed, age, health history, and financial situation that
+        the honest answer requires knowing those inputs.
+      </p>
+    </section>
+
+    <!-- CTA box -->
+    <div class="rounded-xl border-2 p-6 mb-10" style="border-color:#1B6B6D; background:#F0F7F7;">
+      <h3 class="font-bold text-lg mb-2" style="color:#1B6B6D;">Run your own numbers</h3>
+      <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+        The calculator uses your pet's breed, age, and actual spending history to estimate whether
+        insurance has paid off — and what the math looks like going forward. No sales pitch.
+        Just the arithmetic.
+      </p>
+      <a
+        href="/"
+        class="inline-block font-semibold px-5 py-2.5 rounded-lg text-white text-sm transition-opacity hover:opacity-90"
+        style="background:#1B6B6D;"
+      >
+        Run your numbers →
+      </a>
+    </div>
+
+    <!-- See also -->
+    <div class="rounded-xl border border-gray-200 bg-white p-5 mb-8">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">See also</p>
+      <a href="/when-to-buy-pet-insurance/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+        When to Buy Pet Insurance: The Age, Breed, and Timing Math →
+      </a>
+      <p class="text-sm text-gray-500 mt-1">
+        If insurance makes sense for your pet, timing matters more than most people realize.
+        The pre-existing condition window is narrower than it looks.
+      </p>
+    </div>
+
+    <!-- Last updated -->
+    <p class="text-xs text-gray-400 text-right">Last updated: May 2026 · Source: NAPHIA 2024 State of the Industry Report</p>
+
+  </article>
 </BaseLayout>
