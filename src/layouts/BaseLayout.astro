@@ -28,7 +28,7 @@ const canonicalURL = Astro.url;
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5806594895991752" crossorigin="anonymous"></script>
   </head>
-  <body class="min-h-screen flex flex-col" style="background:#FAFAF7; color:#1A1A1A; font-family:system-ui,-apple-system,sans-serif;">
+  <body class="min-h-screen flex flex-col" style="background:#FAFAF7; color:#1A1A1A; font-family:system-ui,-apple-system,sans-serif; background-image:url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.035' fill='%239CA3AF'%3E%3Cellipse cx='13' cy='12' rx='2.5' ry='3'/%3E%3Cellipse cx='20' cy='10' rx='2.5' ry='3'/%3E%3Cellipse cx='27' cy='12' rx='2.5' ry='3'/%3E%3Cellipse cx='10' cy='17' rx='2.5' ry='3'/%3E%3Cpath d='M20 17C16 17 13 20 13 24C13 28 15.5 31 20 31C24.5 31 27 28 27 24C27 20 24 17 20 17Z'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size:40px 40px;">
 
     <!-- Sticky header -->
     <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
@@ -72,7 +72,16 @@ const canonicalURL = Astro.url;
 
     <footer class="border-t border-gray-200 py-6 px-4 sm:px-6 text-sm text-gray-500 mt-12">
       <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between gap-3">
-        <span>&copy; 2026 WasPetInsuranceWorthIt.com</span>
+        <span>&copy; 2026
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" class="inline mx-1 opacity-50" aria-hidden="true">
+            <ellipse cx="7" cy="5.5" rx="2.5" ry="3"/>
+            <ellipse cx="12" cy="4" rx="2.5" ry="3"/>
+            <ellipse cx="17" cy="5.5" rx="2.5" ry="3"/>
+            <ellipse cx="4.5" cy="10" rx="2.5" ry="3" transform="rotate(-15 4.5 10)"/>
+            <path d="M12 9C8.5 9 6 12 6 15.5C6 18.5 8 21 12 21C16 21 18 18.5 18 15.5C18 12 15.5 9 12 9Z"/>
+          </svg>
+          WasPetInsuranceWorthIt.com
+        </span>
         <nav class="flex flex-wrap gap-4">
           <a href="/about" class="hover:text-gray-800">About &amp; Methodology</a>
           <a href="/privacy" class="hover:text-gray-800">Privacy Policy</a>

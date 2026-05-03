@@ -9,9 +9,57 @@ import Calculator from '../components/Calculator';
 >
   <!-- Hero -->
   <section class="mb-10">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight" style="color:#1A1A1A;">
-      Was Pet Insurance Worth It?
-    </h1>
+    <div class="flex flex-col sm:flex-row gap-6 items-center mb-6">
+      <!-- Illustration: above on mobile, right on desktop -->
+      <div class="order-first sm:order-last flex-shrink-0">
+        <svg width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Dog (teal, left side) -->
+          <circle cx="65" cy="50" r="22" stroke="#1B6B6D" stroke-width="2.5"/>
+          <!-- Floppy ear -->
+          <path d="M46 40 Q35 32 38 52 Q40 64 53 66" stroke="#1B6B6D" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Eye -->
+          <circle cx="58" cy="46" r="2.5" fill="#1B6B6D"/>
+          <!-- Nose -->
+          <ellipse cx="74" cy="57" rx="4" ry="2.5" fill="#1B6B6D"/>
+          <!-- Body -->
+          <ellipse cx="65" cy="108" rx="24" ry="30" stroke="#1B6B6D" stroke-width="2.5"/>
+          <!-- Tail -->
+          <path d="M42 100 Q26 88 30 72" stroke="#1B6B6D" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Front legs -->
+          <line x1="53" y1="134" x2="53" y2="155" stroke="#1B6B6D" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="70" y1="134" x2="70" y2="155" stroke="#1B6B6D" stroke-width="2.5" stroke-linecap="round"/>
+
+          <!-- Cat (amber, right side) -->
+          <circle cx="138" cy="50" r="20" stroke="#D4943A" stroke-width="2.5"/>
+          <!-- Ears -->
+          <path d="M125 38 L120 24 L135 38" stroke="#D4943A" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M151 38 L156 24 L141 38" stroke="#D4943A" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Eye -->
+          <circle cx="144" cy="47" r="2.5" fill="#D4943A"/>
+          <!-- Whiskers -->
+          <line x1="120" y1="53" x2="131" y2="56" stroke="#D4943A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="120" y1="59" x2="131" y2="59" stroke="#D4943A" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Body -->
+          <ellipse cx="138" cy="108" rx="22" ry="28" stroke="#D4943A" stroke-width="2.5"/>
+          <!-- Tail -->
+          <path d="M160 115 Q178 98 172 78 Q167 63 160 72" stroke="#D4943A" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Front legs -->
+          <line x1="127" y1="132" x2="127" y2="153" stroke="#D4943A" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="144" y1="132" x2="144" y2="153" stroke="#D4943A" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <!-- Text -->
+      <div class="flex-1 order-last sm:order-first">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight" style="color:#1A1A1A;">
+          Was Pet Insurance Worth It?
+        </h1>
+        <p class="text-gray-600 text-base leading-relaxed">
+          Whether insurance made sense for <em>your</em> pet depends on breed, age, and what actually
+          happened at the vet. This calculator uses data from 50,000 real pets and 210,000 claims to
+          show you the math.
+        </p>
+      </div>
+    </div>
 
     <!-- PCP Framework: two data points, no editorializing -->
     <div class="grid sm:grid-cols-2 gap-4 mb-6">
@@ -27,11 +75,6 @@ import Calculator from '../components/Calculator';
       </div>
     </div>
 
-    <p class="text-gray-600 text-base leading-relaxed max-w-2xl">
-      Whether insurance made sense for <em>your</em> pet depends on breed, age, and what actually
-      happened at the vet. This calculator uses data from 50,000 real pets and 210,000 claims to
-      show you the math.
-    </p>
   </section>
 
   <!-- Calculator -->
