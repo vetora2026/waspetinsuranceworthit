@@ -1,0 +1,318 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does pet insurance cost per month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The average monthly premium for dog insurance (accident and illness) ranges from $35–$65, based on NAPHIA 2024 data showing a $749/year industry average. Cat insurance averages $20–$35/month ($387/year average). Actual premiums vary significantly by breed, age, location, deductible, and reimbursement percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does pet insurance cost so much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet insurance premiums reflect the expected cost of veterinary care for your pet's breed and age, plus the insurer's operating margin. The industry pays back approximately 60–72 cents per dollar collected in premiums. Premiums also increase annually as pets age, since older pets have higher claim rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a lower deductible cost more per month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A $250 annual deductible plan typically costs 30–40% more per month than a $500 deductible plan. The difference in annual premiums can approach or exceed the $250 deductible difference itself, depending on the carrier and breed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does pet insurance compare to auto insurance in payout efficiency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet insurance loss ratios run approximately 60–72%, meaning $0.60–$0.72 is paid back per dollar collected. Auto insurance typically runs 55–75%. Health insurance is regulated at a minimum 80% loss ratio under the ACA MLR rule. Pet insurance is broadly comparable to auto insurance in payout structure."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Much Does Pet Insurance Cost Per Month? (2026 Data)",
+  "description": "Average dog insurance costs $35–60/month. Average annual vet bills run $350–580. Full cost breakdown by pet type, breed, deductible, and plan.",
+  "url": "https://waspetinsuranceworthit.com/how-much-does-pet-insurance-cost/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WasPetInsuranceWorthIt.com",
+    "url": "https://waspetinsuranceworthit.com"
+  }
+};
+---
+
+<BaseLayout
+  title="How Much Does Pet Insurance Cost Per Month? (2026 Data)"
+  description="Average dog insurance costs $35–60/month. Average annual vet bills run $350–580. Full cost breakdown by pet type, breed, deductible, and plan."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <article class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4 leading-tight" style="color:#1B6B6D;">
+        How Much Does Pet Insurance Cost Per Month?
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        The average monthly premium for a dog accident-and-illness policy runs $35–$60.
+        The average annual veterinary spend for a dog-owning household runs approximately $350–$580.
+      </p>
+    </header>
+
+    <!-- Two Legos opening cards -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+      <div class="rounded-xl border border-gray-200 bg-white p-5">
+        <p class="text-3xl font-bold mb-1" style="color:#1B6B6D;">$35–$60<span class="text-lg font-normal text-gray-500">/mo</span></p>
+        <p class="text-sm text-gray-600">Average monthly premium — dog, accident &amp; illness plan</p>
+        <p class="text-xs text-gray-400 mt-2">NAPHIA 2024: $749/yr industry average ÷ 12</p>
+      </div>
+      <div class="rounded-xl border border-gray-200 bg-white p-5">
+        <p class="text-3xl font-bold mb-1" style="color:#D4943A;">$350–$580<span class="text-lg font-normal text-gray-500">/yr</span></p>
+        <p class="text-sm text-gray-600">Average annual veterinary spend per dog-owning household</p>
+        <p class="text-xs text-gray-400 mt-2">AVMA Pet Expenditure survey; ranges by pet age and region</p>
+      </div>
+    </div>
+
+    <!-- Section 1: Reference table -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Monthly premium and vet cost reference by pet type</h2>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        Premiums vary by species, breed, age, location, deductible, reimbursement percentage,
+        and annual limit. The ranges below reflect industry averages from NAPHIA 2024 data and
+        carrier rate surveys — not quotes for any specific pet or policy.
+      </p>
+
+      <div class="rounded-xl border border-gray-200 bg-white overflow-hidden mb-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-100 bg-gray-50">
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Pet Type</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Avg Monthly Premium</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Avg Annual Vet Cost</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Avg Annual Claims Paid</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="px-4 py-3 text-gray-800">Dog — mixed breed, young</td>
+                <td class="px-4 py-3 text-gray-700">$30–$45</td>
+                <td class="px-4 py-3 text-gray-700">$350–$500</td>
+                <td class="px-4 py-3 text-gray-700">~$200–$350</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800">Dog — purebred, common</td>
+                <td class="px-4 py-3 text-gray-700">$40–$65</td>
+                <td class="px-4 py-3 text-gray-700">$400–$600</td>
+                <td class="px-4 py-3 text-gray-700">~$250–$400</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800">Dog — high-risk breed</td>
+                <td class="px-4 py-3 text-gray-700">$60–$100+</td>
+                <td class="px-4 py-3 text-gray-700">$500–$800+</td>
+                <td class="px-4 py-3 text-gray-700">~$350–$600</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800">Cat — indoor</td>
+                <td class="px-4 py-3 text-gray-700">$20–$35</td>
+                <td class="px-4 py-3 text-gray-700">$250–$400</td>
+                <td class="px-4 py-3 text-gray-700">~$150–$250</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800">Cat — outdoor/mixed access</td>
+                <td class="px-4 py-3 text-gray-700">$30–$50</td>
+                <td class="px-4 py-3 text-gray-700">$350–$550</td>
+                <td class="px-4 py-3 text-gray-700">~$200–$350</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 leading-relaxed">
+        Premiums vary significantly by provider, deductible, reimbursement percentage, location,
+        and age of pet. These ranges reflect industry averages from NAPHIA data and carrier rate
+        surveys. "Claims paid" reflects average annual reimbursements across all policyholders
+        in that category — not the maximum possible payout per incident.
+      </p>
+    </section>
+
+    <!-- Section 2: What drives price up -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">What drives premiums up</h2>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        Four variables account for most of the spread in pet insurance premiums across carriers:
+      </p>
+
+      <div class="space-y-4 mb-6">
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Age</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Premiums increase at each annual renewal. The increase is modest in years 1–4 and
+            accelerates sharply after age 6. A dog insured continuously from age 1 to age 10
+            will pay roughly 2–3× more per year at renewal 10 than at renewal 1. Carriers
+            do not typically lock in rates at enrollment.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Breed</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            High-risk breeds — English Bulldogs, French Bulldogs, Great Danes, Golden Retrievers —
+            carry premiums 2–3× higher than mixed-breed dogs at the same age. Insurers price
+            breed-specific genetic risk directly into the monthly rate. Mixed breeds without
+            identifiable high-risk ancestry are typically priced as lower-risk.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Deductible choice</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-3">
+            Selecting a lower deductible raises the monthly premium. The arithmetic of the tradeoff:
+          </p>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <div class="rounded-lg bg-gray-50 border border-gray-100 p-3">
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">$250 deductible plan</p>
+              <p class="font-semibold text-gray-900 text-sm">~30–40% more per month</p>
+              <p class="text-xs text-gray-500 mt-1">vs. a $500 deductible plan at identical other terms</p>
+            </div>
+            <div class="rounded-lg bg-gray-50 border border-gray-100 p-3">
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">$250 deductible advantage</p>
+              <p class="font-semibold text-gray-900 text-sm">$250 more paid out before payout begins</p>
+              <p class="text-xs text-gray-500 mt-1">That is the full structural difference between the two plans</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Location</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Veterinary cost of care varies significantly by market. Urban areas — New York,
+            San Francisco, Boston — typically see premiums 20–40% higher than rural Midwest or
+            Southeast rates for the same breed and age. Carriers adjust for local veterinary
+            service pricing when setting premiums in each state.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Loss ratio context -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">What the industry pays back per dollar collected</h2>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#1B6B6D;">60–72%</p>
+          <p class="text-sm text-gray-700 mb-2">Pet insurance industry loss ratio — claims paid per $1 in premiums collected</p>
+          <p class="text-xs text-gray-400">NAPHIA 2024 State of the Industry Report</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#D4943A;">55–75% / 80%+</p>
+          <p class="text-sm text-gray-700 mb-2">Auto insurance loss ratio range (55–75%) · Health insurance ACA MLR minimum (80% individual/small group, 85% large group)</p>
+          <p class="text-xs text-gray-400">NAIC industry data; ACA 80/20 rule</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The 28–40% spread between premiums collected and claims paid covers the insurer's
+        administrative costs, underwriting, and profit — the same structure as any insurance
+        category. The ACA's minimum loss ratio requirement (80% for individual/small group health
+        insurance) is the highest regulated floor in any major US insurance category. Pet insurance
+        has no equivalent federal regulation.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        At NAPHIA's 72% figure: a dog owner paying $749/year receives approximately $539/year in
+        expected claims. The $210 annual difference is the cost of risk transfer. The distribution
+        behind this average is skewed — most policyholders receive less than they pay, while
+        policyholders with major incidents receive considerably more.
+      </p>
+    </section>
+
+    <!-- FAQ accordions -->
+    <section class="mb-10 space-y-3">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Common questions</h2>
+
+      {[
+        {
+          q: "Does pet insurance cost vary by state?",
+          a: "Yes. Veterinary cost of care varies significantly by region, and carriers price accordingly. A mixed-breed dog in New York City may cost 25–40% more to insure than the same dog in rural Tennessee. Some states also have insurance regulations that affect policy structure and available plan designs."
+        },
+        {
+          q: "What is the difference between per-incident and annual deductibles?",
+          a: "An annual deductible (e.g. $500/yr) applies once per policy year regardless of how many conditions you claim. A per-incident deductible (e.g. $200 per condition) resets each time a new condition is treated. Annual deductibles generally favor owners with multiple claims in a year; per-incident deductibles can be more favorable for rare, single large events."
+        },
+        {
+          q: "How does the reimbursement percentage affect monthly cost?",
+          a: "Choosing 90% reimbursement instead of 80% can add 15–25% to the monthly premium at identical other terms. The gap matters most for large single-incident claims: 10% difference on a $10,000 bill represents $1,000 out of pocket."
+        }
+      ].map((item) => (
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex justify-between items-center px-5 py-4 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors list-none">
+            {item.q}
+            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </section>
+
+    <!-- CTA box -->
+    <div class="rounded-xl border-2 p-6 mb-10" style="border-color:#1B6B6D; background:#F0F7F7;">
+      <h3 class="font-bold text-lg mb-2" style="color:#1B6B6D;">See the math for your specific situation</h3>
+      <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+        Input your pet's breed, age, and vet spending history. The calculator estimates what you
+        would have paid in premiums versus what insurance would have returned — using NAPHIA
+        industry data and real claim distributions from 50,000 pets.
+      </p>
+      <a
+        href="/"
+        class="inline-block font-semibold px-5 py-2.5 rounded-lg text-white text-sm transition-opacity hover:opacity-90"
+        style="background:#1B6B6D;"
+      >
+        Run your numbers →
+      </a>
+    </div>
+
+    <!-- See also -->
+    <div class="rounded-xl border border-gray-200 bg-white p-5 mb-8">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">See also</p>
+      <div class="space-y-4">
+        <div>
+          <a href="/pet-insurance-vs-savings-account/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+            Pet Insurance vs. Savings Account: Which Costs Less Over 10 Years? →
+          </a>
+          <p class="text-sm text-gray-500 mt-0.5">Comparing the 10-year math on monthly premiums vs. a dedicated vet savings fund.</p>
+        </div>
+        <div>
+          <a href="/what-does-pet-insurance-not-cover/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+            What Does Pet Insurance Not Cover? →
+          </a>
+          <p class="text-sm text-gray-500 mt-0.5">Full exclusion reference: pre-existing conditions, waiting periods, and routine care.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 text-right">Last updated: May 2026 · Source: NAPHIA 2024 State of the Industry Report</p>
+
+  </article>
+</BaseLayout>

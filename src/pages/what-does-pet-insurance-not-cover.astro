@@ -1,0 +1,349 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does pet insurance not cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most pet insurance policies exclude: pre-existing conditions (the leading cause of claim denial), routine and preventive care (vaccines, annual exams, dental cleanings unless a wellness rider is added), breeding and pregnancy costs, cosmetic procedures, elective procedures, and conditions arising during the waiting period. Bilateral conditions, exam fees, and certain breed-specific conditions may also be excluded depending on the carrier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a pre-existing condition in pet insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any condition that was diagnosed or showing symptoms before your policy start date is considered pre-existing and permanently excluded. This includes conditions flagged in prior vet records without a formal diagnosis — recurring symptoms, abnormal bloodwork, or a vet note about limping can all create exclusions when claims are reviewed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long are pet insurance waiting periods?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Waiting periods vary by carrier and coverage type. Accidents typically have 2–15 day waiting periods. Illness coverage typically has 14–30 day waiting periods. Orthopedic conditions such as cruciate ligament tears often have 6–14 month waiting periods. Any condition that develops during a waiting period is treated as pre-existing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does pet insurance cover dental?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Routine dental cleanings are typically excluded from accident-and-illness policies. Dental accidents (broken teeth from trauma) may be covered under some plans. Some policies cover dental illness (e.g. tooth root abscesses). Wellness riders may cover one routine dental cleaning per year. Review each carrier's dental language carefully — it varies significantly."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Does Pet Insurance Not Cover? Full Exclusions Reference (2026)",
+  "description": "Pre-existing conditions, routine care, breeding costs, and waiting-period conditions are the most common pet insurance exclusions. Full reference list with waiting periods by provider.",
+  "url": "https://waspetinsuranceworthit.com/what-does-pet-insurance-not-cover/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WasPetInsuranceWorthIt.com",
+    "url": "https://waspetinsuranceworthit.com"
+  }
+};
+---
+
+<BaseLayout
+  title="What Does Pet Insurance Not Cover? Full Exclusions Reference (2026)"
+  description="Pre-existing conditions, routine care, breeding costs, and waiting-period conditions are the most common pet insurance exclusions. Full reference list."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <article class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4 leading-tight" style="color:#1B6B6D;">
+        What Does Pet Insurance Not Cover?
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Exclusions and claim denials are how pet insurance actually works in practice.
+        This reference covers the most common exclusion categories across major US carriers,
+        with waiting period data and the pre-existing condition rules that drive most disputes.
+      </p>
+    </header>
+
+    <!-- Section 1: Exclusion reference table -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Common exclusions across major carriers</h2>
+
+      <div class="rounded-xl border border-gray-200 bg-white overflow-hidden mb-5">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-100 bg-gray-50">
+                <th class="text-left px-4 py-3 font-semibold text-gray-700 w-2/5">Exclusion</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Pre-existing conditions</td>
+                <td class="px-4 py-3 text-gray-600">Any condition diagnosed or showing symptoms before coverage start date. The #1 cause of claim denial across all carriers. Permanent exclusion in most cases.</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Routine and preventive care</td>
+                <td class="px-4 py-3 text-gray-600">Vaccines, annual exams, flea/tick/heartworm prevention, dental cleanings. Excluded from all accident-and-illness policies unless a separate wellness rider is purchased.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Breeding and pregnancy</td>
+                <td class="px-4 py-3 text-gray-600">Pregnancy, whelping, C-sections, fertility treatments. Universally excluded across all major carriers.</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Cosmetic procedures</td>
+                <td class="px-4 py-3 text-gray-600">Ear cropping, tail docking, dewclaw removal, declawing — unless a licensed veterinarian deems the procedure medically necessary.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Elective procedures</td>
+                <td class="px-4 py-3 text-gray-600">Any procedure not deemed medically necessary. Spay/neuter is excluded from most standard policies (sometimes covered under wellness riders).</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Bilateral conditions (some carriers)</td>
+                <td class="px-4 py-3 text-gray-600">If one knee, hip, or eye has a condition before enrollment, the corresponding condition on the opposite side may also be excluded as "bilateral." Varies significantly by carrier policy language.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Waiting-period conditions</td>
+                <td class="px-4 py-3 text-gray-600">Any condition that develops during the policy waiting period is treated as pre-existing and excluded. Buying coverage the day before a vet appointment does not create retroactive coverage.</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Exam fees (some carriers)</td>
+                <td class="px-4 py-3 text-gray-600">Some plans exclude the office visit/consultation fee itself, reimbursing only the treatment costs. Check your policy's definition of "covered expenses."</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Experimental treatments</td>
+                <td class="px-4 py-3 text-gray-600">Treatments not approved or widely accepted by the veterinary profession. Clinical trials may be partially or fully excluded depending on carrier.</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800 font-medium align-top">Behavioral treatments</td>
+                <td class="px-4 py-3 text-gray-600">Training, behavioral therapy, and most prescription behavior medications are excluded from standard plans. A small number of carriers offer behavioral coverage as an add-on.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Pre-existing condition problem -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The pre-existing condition problem</h2>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#1B6B6D;">30–40%</p>
+          <p class="text-sm text-gray-700">Estimated share of pet insurance claim denials citing pre-existing conditions</p>
+          <p class="text-xs text-gray-400 mt-2">Across major carriers; specific figures vary by insurer and not publicly reported</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#D4943A;">2–6 months</p>
+          <p class="text-sm text-gray-700">Estimated average time between when a pet develops early symptoms and when the owner notices</p>
+          <p class="text-xs text-gray-400 mt-2">Veterinary studies on delayed diagnosis; range varies significantly by condition type</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The pre-existing condition rule creates a practical problem: conditions often develop
+        before owners recognize them. A dog develops a slight limp in April; the owner doesn't
+        notice anything unusual until June; the vet documents "possible early joint disease" in
+        August; the owner buys insurance in September. All of this is now pre-existing, and the
+        orthopedic condition is excluded — permanently.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        When a claim is filed, carriers typically request complete vet records going back 12–24 months
+        (sometimes further). Claims adjusters review those records for any prior mention of anything
+        related to the current claim — symptoms, abnormal values, ambiguous findings — and exclude
+        based on those records. This is standard industry practice, not bad faith.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        The practical implication: enrolling before any significant vet visits have occurred
+        minimizes the risk of pre-existing exclusions. A puppy with only vaccines and a single
+        wellness exam has almost no exclusion exposure. A 4-year-old dog with a routine vet
+        history has 4 years of potential exclusion material.
+      </p>
+    </section>
+
+    <!-- Section 3: Waiting periods by carrier -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Waiting periods by major carrier</h2>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        Waiting periods vary by carrier, coverage type, and state. Conditions that develop during
+        a waiting period are treated as pre-existing. The table below reflects publicly documented
+        standard waiting periods — verify current terms on each carrier's website before purchasing.
+      </p>
+
+      <div class="rounded-xl border border-gray-200 bg-white overflow-hidden mb-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-100 bg-gray-50">
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Carrier</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Accidents</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Illness</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Orthopedic</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium">Lemonade</td>
+                <td class="px-4 py-3 text-gray-600">2 days</td>
+                <td class="px-4 py-3 text-gray-600">14 days</td>
+                <td class="px-4 py-3 text-gray-600">6 months</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800 font-medium">Embrace</td>
+                <td class="px-4 py-3 text-gray-600">2 days</td>
+                <td class="px-4 py-3 text-gray-600">14 days</td>
+                <td class="px-4 py-3 text-gray-600">6 months</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium">Trupanion</td>
+                <td class="px-4 py-3 text-gray-600">5 days</td>
+                <td class="px-4 py-3 text-gray-600">30 days</td>
+                <td class="px-4 py-3 text-gray-600">30 days</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-800 font-medium">Healthy Paws</td>
+                <td class="px-4 py-3 text-gray-600">15 days</td>
+                <td class="px-4 py-3 text-gray-600">15 days</td>
+                <td class="px-4 py-3 text-gray-600">12 months (hip dysplasia)</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-800 font-medium">ASPCA Pet Insurance</td>
+                <td class="px-4 py-3 text-gray-600">3 days</td>
+                <td class="px-4 py-3 text-gray-600">14 days</td>
+                <td class="px-4 py-3 text-gray-600">14 days</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 leading-relaxed">
+        Waiting periods are subject to change and vary by state. Some carriers waive waiting periods
+        with a veterinary exam within 30 days of enrollment. Verify current terms directly with each
+        carrier before purchase.
+      </p>
+    </section>
+
+    <!-- Section 4: What IS covered -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">What is typically covered</h2>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        Standard accident-and-illness policies typically cover new conditions that develop after
+        the waiting period ends and were not present before enrollment:
+      </p>
+
+      <div class="rounded-xl border border-gray-200 bg-white p-5 mb-4">
+        <div class="grid sm:grid-cols-2 gap-3">
+          {[
+            "Accidents and traumatic injuries",
+            "Illnesses and infections",
+            "Surgery and hospitalization",
+            "Diagnostic tests (bloodwork, X-rays, MRI, ultrasound)",
+            "Prescription medications for covered conditions",
+            "Emergency and critical care",
+            "Specialist and referral visits",
+            "Cancer diagnosis and treatment",
+            "Chronic conditions (after enrollment, before first diagnosis)",
+            "Hereditary and congenital conditions (if not pre-existing)"
+          ].map((item) => (
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#1B6B6D;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-gray-700">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 leading-relaxed">
+        Coverage specifics vary by policy. Hereditary conditions (hip dysplasia, heart disease,
+        IVDD) are covered by most major carriers if not pre-existing at enrollment — this is a key
+        differentiator. Confirm hereditary coverage language before purchasing for high-risk breeds.
+      </p>
+    </section>
+
+    <!-- FAQ accordions -->
+    <section class="mb-10 space-y-3">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Common questions</h2>
+
+      {[
+        {
+          q: "Can a carrier add new exclusions at renewal?",
+          a: "Some carriers review medical records at annual renewal and add exclusions for conditions that developed during the prior year. Others maintain the same exclusion list established at enrollment. This is one of the most important policy terms to verify before purchase — ask each carrier specifically whether exclusions can be added at renewal."
+        },
+        {
+          q: "What is a 'curable' pre-existing condition?",
+          a: "A small number of carriers (notably Embrace and some others) will remove pre-existing exclusions for conditions that have been symptom-free and treatment-free for a specified period (typically 12–24 months). These are called 'curable' or 'temporary' pre-existing conditions. Chronic or incurable conditions (like allergies, diabetes, or orthopedic disease) remain excluded permanently."
+        },
+        {
+          q: "Are teeth and dental disease covered?",
+          a: "Routine dental cleanings are excluded from standard policies. Dental accidents (e.g. a broken tooth from chewing a hard object) are covered by most plans. Dental illness (tooth root abscesses, periodontal disease) is covered by some plans and excluded by others. Wellness riders sometimes include one routine dental cleaning per year. Review the specific dental language in any policy you consider — it varies significantly by carrier."
+        }
+      ].map((item) => (
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex justify-between items-center px-5 py-4 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors list-none">
+            {item.q}
+            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </section>
+
+    <!-- CTA box -->
+    <div class="rounded-xl border-2 p-6 mb-10" style="border-color:#1B6B6D; background:#F0F7F7;">
+      <h3 class="font-bold text-lg mb-2" style="color:#1B6B6D;">See how exclusions affect the math for your situation</h3>
+      <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+        The calculator uses your pet's breed, age, and spending history to estimate what insurance
+        would have returned — accounting for the policy structure that determines what's claimable
+        versus excluded.
+      </p>
+      <a
+        href="/"
+        class="inline-block font-semibold px-5 py-2.5 rounded-lg text-white text-sm transition-opacity hover:opacity-90"
+        style="background:#1B6B6D;"
+      >
+        Run the numbers for your breed →
+      </a>
+    </div>
+
+    <!-- See also -->
+    <div class="rounded-xl border border-gray-200 bg-white p-5 mb-8">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">See also</p>
+      <div class="space-y-4">
+        <div>
+          <a href="/when-to-buy-pet-insurance/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+            When to Buy Pet Insurance: The Age, Breed, and Timing Math →
+          </a>
+          <p class="text-sm text-gray-500 mt-0.5">How the pre-existing condition window affects the buying decision — and when it may already be closed.</p>
+        </div>
+        <div>
+          <a href="/is-pet-insurance-worth-it/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+            Is Pet Insurance Worth It? What the Data Actually Shows →
+          </a>
+          <p class="text-sm text-gray-500 mt-0.5">The industry-wide loss ratio, when insurance returns more than it costs, and when it doesn't.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 text-right">Last updated: May 2026 · Carrier waiting period data from individual provider websites</p>
+
+  </article>
+</BaseLayout>

@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it better to self-insure a pet than buy pet insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Self-insuring (a dedicated savings account) has a higher expected value over 10 years because you capture the insurer's margin. At a 60–72% industry loss ratio, the average policyholder pays more in premiums than they receive in claims. The tradeoff: a savings account cannot cover a catastrophic event in year 1 or 2, before the account builds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a pet savings account accumulate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Setting aside $50/month at 4% APY for 10 years accumulates approximately $7,350 in principal and interest. At $100/month, approximately $14,700. The money remains yours if your pet stays healthy — unlike premiums, which are not refunded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does pet insurance beat a savings account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Insurance beats self-insuring when a major medical event occurs before the savings account has had time to build. An ACL surgery costing $4,000–$6,000 in year 1 or 2 of a savings plan would exceed available funds. Insurance covers this from day one of the policy (after the waiting period)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does pet insurance cover pre-existing conditions a savings account would?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Pet insurance excludes pre-existing conditions permanently. A savings account has no such restriction — your money covers any condition, diagnosed before or after you started saving. For pets with existing conditions, a savings account is the only option that covers those conditions."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pet Insurance vs. Savings Account: Which Costs Less Over 10 Years?",
+  "description": "$50/month in savings accumulates $7,350 over 10 years. $50/month in pet insurance returns roughly $3,600–4,300 in claims. Full comparison.",
+  "url": "https://waspetinsuranceworthit.com/pet-insurance-vs-savings-account/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WasPetInsuranceWorthIt.com",
+    "url": "https://waspetinsuranceworthit.com"
+  }
+};
+---
+
+<BaseLayout
+  title="Pet Insurance vs. Savings Account: Which Costs Less? (2026)"
+  description="$50/month in savings accumulates $7,350 over 10 years. $50/month in pet insurance returns roughly $3,600–4,300 in claims. Here's the full comparison."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <article class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4 leading-tight" style="color:#1B6B6D;">
+        Pet Insurance vs. Savings Account
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Setting aside $50/month for 10 years at 4% APY accumulates approximately $7,350.
+        Paying $50/month in pet insurance premiums for 10 years costs $6,000 with an expected
+        return of approximately $3,600–$4,300 in claims.
+      </p>
+    </header>
+
+    <!-- Two Legos opening cards -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+      <div class="rounded-xl border border-gray-200 bg-white p-5">
+        <p class="text-3xl font-bold mb-1" style="color:#1B6B6D;">$7,350</p>
+        <p class="text-sm text-gray-600">Savings account balance after 10 years at $50/month, 4% APY</p>
+        <p class="text-xs text-gray-400 mt-2">Principal: $6,000 · Interest earned: ~$1,350 · Balance stays yours</p>
+      </div>
+      <div class="rounded-xl border border-gray-200 bg-white p-5">
+        <p class="text-3xl font-bold mb-1" style="color:#D4943A;">$3,600–$4,300</p>
+        <p class="text-sm text-gray-600">Expected claims returned from $6,000 paid in premiums over 10 years</p>
+        <p class="text-xs text-gray-400 mt-2">At 60–72% industry loss ratio · Net cost: ~$1,700–$2,400</p>
+      </div>
+    </div>
+
+    <!-- Section 1: The catastrophic scenario -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The catastrophic scenario</h2>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        The 10-year math favors the savings account in expected value. The variable that changes
+        the outcome is timing. Two data points illustrate the gap:
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#1B6B6D;">$3,000–$6,000</p>
+          <p class="text-sm text-gray-700">Typical cost of ACL (CCL) repair surgery for a dog</p>
+          <p class="text-xs text-gray-400 mt-2">One of the most common major pet surgeries; can affect any breed or age</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#D4943A;">~5 years</p>
+          <p class="text-sm text-gray-700">Time for a $50/month savings account to reach $3,000</p>
+          <p class="text-xs text-gray-400 mt-2">At $50/mo, $3,000 in principal accumulates at month 60; slightly faster with interest</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed mb-4">
+        A savings account started at the same time as a new puppy reaches $3,000 in approximately
+        five years. An ACL tear in year 2 exhausts what's available and leaves a gap. A policy
+        in force covers the same surgery from the first day after the waiting period ends —
+        regardless of how long premiums have been paid.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Other common major surgeries with similar cost profiles: foreign body ingestion ($2,000–$5,000),
+        GDV/bloat ($2,000–$8,000), cancer treatment ($5,000–$20,000), and urinary obstruction
+        ($2,000–$5,000 in cats). Any of these in years 1–3 of a savings plan creates a deficit.
+      </p>
+    </section>
+
+    <!-- Section 2: Comparison table -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Side-by-side comparison</h2>
+
+      <div class="rounded-xl border border-gray-200 bg-white overflow-hidden mb-5">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-100 bg-gray-50">
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Factor</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Pet Insurance</th>
+                <th class="text-left px-4 py-3 font-semibold text-gray-700">Savings Account</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="px-4 py-3 text-gray-700 font-medium">Monthly cost</td>
+                <td class="px-4 py-3 text-gray-600">$30–$60 (set by insurer; increases with age)</td>
+                <td class="px-4 py-3 text-gray-600">$30–$60 (your choice; fixed)</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-700 font-medium">Covers catastrophic event in Year 1</td>
+                <td class="px-4 py-3 text-gray-600">Yes (after waiting period)</td>
+                <td class="px-4 py-3 text-gray-600">No — account balance is too low</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-700 font-medium">Money lost if pet stays healthy</td>
+                <td class="px-4 py-3 text-gray-600">Premiums minus any claims</td>
+                <td class="px-4 py-3 text-gray-600">$0 — money is yours to keep</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-700 font-medium">Expected 10-year net cost</td>
+                <td class="px-4 py-3 text-gray-600">~$1,700–$2,400</td>
+                <td class="px-4 py-3 text-gray-600">$0 (you keep the balance)</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-700 font-medium">Covers pre-existing conditions</td>
+                <td class="px-4 py-3 text-gray-600">No — excluded permanently</td>
+                <td class="px-4 py-3 text-gray-600">Yes — your money, no restrictions</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="px-4 py-3 text-gray-700 font-medium">Cost increases over time</td>
+                <td class="px-4 py-3 text-gray-600">Yes — age-based annual increases</td>
+                <td class="px-4 py-3 text-gray-600">No — you control the contribution</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-700 font-medium">Earns interest</td>
+                <td class="px-4 py-3 text-gray-600">No</td>
+                <td class="px-4 py-3 text-gray-600">Yes — HYSA rates currently 4–5% APY</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Break-even -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">The break-even question</h2>
+      <p class="text-gray-700 leading-relaxed mb-5">
+        The decision turns on whether a major medical event happens before the savings account
+        can accumulate enough to cover it. Two data points frame the range:
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#1B6B6D;">~$1,700–$2,400</p>
+          <p class="text-sm text-gray-700">Amount saved by self-insuring over 10 years if no major event occurs</p>
+          <p class="text-xs text-gray-400 mt-2">Insurance net cost at 60–72% loss ratio on $6,000 in premiums paid</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <p class="text-2xl font-bold mb-1" style="color:#D4943A;">~$1,500–$3,500</p>
+          <p class="text-sm text-gray-700">Amount saved by having insurance if one major surgery ($4,000+) occurs in the first 3 years</p>
+          <p class="text-xs text-gray-400 mt-2">Compared to paying out of pocket with a savings account not yet built to full balance</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The savings account accumulates slowly in the first few years. During that period, the
+        account cannot absorb a single large emergency. Insurance provides full coverage from
+        day one. As the account grows, the protection gap shrinks — by year 5–6, the savings
+        account can cover most single incidents, and the math shifts toward self-insuring.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        The breed matters significantly here. A French Bulldog with a known 30–40% lifetime
+        probability of needing spinal or respiratory surgery presents a different risk profile
+        than a mixed-breed dog without genetic predispositions. The same savings account
+        strategy carries different risk in each case.
+      </p>
+    </section>
+
+    <!-- Section 4: When each makes sense -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">What the data suggests about each scenario</h2>
+
+      <div class="space-y-4">
+        <div class="border-l-4 pl-5 py-1" style="border-color:#1B6B6D;">
+          <h3 class="font-bold text-gray-900 mb-1">Young, high-risk breed, no existing conditions</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            The savings account cannot absorb a year-1 emergency. Insurance locks in the lowest
+            available premium before breed-specific conditions develop. The expected 10-year cost
+            of insurance ($1,700–$2,400 net) may be offset by a single major claim.
+          </p>
+        </div>
+
+        <div class="border-l-4 pl-5 py-1" style="border-color:#1B6B6D;">
+          <h3 class="font-bold text-gray-900 mb-1">Older pet with existing conditions</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Pre-existing conditions are excluded from insurance permanently. The savings account
+            covers everything regardless of medical history. High premiums at age 8+ compress
+            the insurance return further.
+          </p>
+        </div>
+
+        <div class="border-l-4 pl-5 py-1" style="border-color:#1B6B6D;">
+          <h3 class="font-bold text-gray-900 mb-1">Financially resilient owner, low-risk breed</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            If a $5,000–$10,000 emergency doesn't create significant financial distress, the
+            savings account's $1,700–$2,400 expected advantage over insurance compounds over time.
+            The tradeoff is bearing the full risk of timing — the emergency might come in year 1.
+          </p>
+        </div>
+
+        <div class="border-l-4 pl-5 py-1" style="border-color:#D4943A;">
+          <h3 class="font-bold text-gray-900 mb-1">Owner who couldn't afford a $5,000 emergency bill</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            The insurance premium converts an unpredictable large expense into a predictable
+            small monthly cost. In this scenario, insurance addresses a real liquidity problem
+            the savings account cannot solve in the early years.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ accordions -->
+    <section class="mb-10 space-y-3">
+      <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Common questions</h2>
+
+      {[
+        {
+          q: "What interest rate should I assume for a pet savings account?",
+          a: "High-yield savings accounts (HYSA) are currently paying 4–5% APY at many online banks. A conservative assumption for planning purposes is 4% APY. At that rate, $50/month accumulates approximately $7,350 over 10 years — $6,000 in principal and $1,350 in interest."
+        },
+        {
+          q: "Can I do both — save AND have insurance?",
+          a: "Yes. Some pet owners carry a lower-coverage, higher-deductible plan (e.g. $1,000 deductible) at reduced monthly cost, and self-insure the deductible amount in a savings account. This approach covers catastrophic incidents while reducing the premium cost."
+        },
+        {
+          q: "Does a CareCredit or veterinary payment plan change the comparison?",
+          a: "Veterinary payment plans (CareCredit, Scratchpay) provide access to credit for vet bills. They solve the same problem as insurance for immediate emergencies — covering a bill before savings are available. The difference: credit plans accrue interest, may require good credit, and don't reduce the total cost of care. They are financing, not risk transfer."
+        }
+      ].map((item) => (
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex justify-between items-center px-5 py-4 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors list-none">
+            {item.q}
+            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </section>
+
+    <!-- CTA box -->
+    <div class="rounded-xl border-2 p-6 mb-10" style="border-color:#1B6B6D; background:#F0F7F7;">
+      <h3 class="font-bold text-lg mb-2" style="color:#1B6B6D;">Run the numbers for your pet</h3>
+      <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+        The calculator uses your pet's breed, age, and vet spending history to show how the
+        insurance math looks for your specific situation — including whether the expected value
+        points toward insurance or self-insuring.
+      </p>
+      <a
+        href="/"
+        class="inline-block font-semibold px-5 py-2.5 rounded-lg text-white text-sm transition-opacity hover:opacity-90"
+        style="background:#1B6B6D;"
+      >
+        Run the numbers for your breed and age →
+      </a>
+    </div>
+
+    <!-- See also -->
+    <div class="rounded-xl border border-gray-200 bg-white p-5 mb-8">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">See also</p>
+      <div class="space-y-4">
+        <div>
+          <a href="/how-much-does-pet-insurance-cost/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+            How Much Does Pet Insurance Cost Per Month? →
+          </a>
+          <p class="text-sm text-gray-500 mt-0.5">Full premium reference by pet type, breed, deductible, and plan structure.</p>
+        </div>
+        <div>
+          <a href="/when-to-buy-pet-insurance/" class="text-base font-medium hover:underline" style="color:#1B6B6D;">
+            When to Buy Pet Insurance: The Age, Breed, and Timing Math →
+          </a>
+          <p class="text-sm text-gray-500 mt-0.5">How the pre-existing condition window affects both the insurance and self-insuring strategies.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 text-right">Last updated: May 2026 · Source: NAPHIA 2024 State of the Industry Report</p>
+
+  </article>
+</BaseLayout>
