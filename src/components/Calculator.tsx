@@ -196,7 +196,6 @@ export default function Calculator() {
   const [result, setResult] = useState<ReturnType<typeof calculate> | null>(null);
   const [breedSearch, setBreedSearch] = useState('');
   const [showBreedList, setShowBreedList] = useState(false);
-  const [submitState, setSubmitState] = useState<'idle' | 'submitted' | 'dismissed'>('idle');
 
   const breeds = useMemo(
     () => (form.species === 'dog' ? breedsData.dogs : breedsData.cats),
@@ -277,38 +276,9 @@ export default function Calculator() {
     };
     const r = calculate(input);
     setResult(r);
-    setSubmitState('idle');
     setTimeout(() => {
       document.getElementById('results-section')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
-  }
-
-  async function handleContribute(r: ReturnType<typeof calculate>) {
-    try {
-      const payload = {
-        species: form.species,
-        breed: form.breed,
-        age_now_years: parseFloat(form.ageNow) || 0,
-        age_acquired_years: parseFloat(form.ageAcquired) || 0,
-        state_code: null,
-        total_vet_spend_bucket: form.spendingBucket,
-        largest_bill_bucket: form.largestBill || null,
-        pct_routine: form.routinePercent,
-        major_incidents: form.incidents,
-        had_insurance: form.hasInsurance ?? false,
-        would_buy_again: form.wouldBuyAgain || '',
-        verdict: r.verdictBranch,
-        verdict_dollars: r.netResult,
-      };
-      await fetch('/api/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-    } catch {
-      // fail silently
-    }
-    setSubmitState('submitted');
   }
 
   const incidents = form.species === 'dog' ? DOG_INCIDENTS : CAT_INCIDENTS;
@@ -665,39 +635,6 @@ export default function Calculator() {
             lifeExpectancy={selectedBreed?.lifeExpectancy ?? (form.species === 'dog' ? 12 : 14)}
             hasInsurance={form.hasInsurance ?? false}
           />
-
-          {/* Opt-in data contribution */}
-          {submitState === 'idle' && (
-            <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-sm font-semibold text-gray-700 mb-1">Help improve this calculator</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                Your anonymized result can help make this tool more accurate for future pet owners.
-                No personal information is stored — just your pet's breed, age, spending range, and the verdict.
-              </p>
-              <div className="flex gap-3">
-                <button
-                  type="button"
-                  onClick={() => handleContribute(result)}
-                  className="px-4 py-2 bg-teal-700 text-white rounded-lg text-sm font-medium hover:bg-teal-800 transition-colors"
-                >
-                  Contribute my result
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setSubmitState('dismissed')}
-                  className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
-                >
-                  No thanks
-                </button>
-              </div>
-            </div>
-          )}
-
-          {submitState === 'submitted' && (
-            <div className="mt-8 bg-teal-50 border border-teal-200 rounded-xl p-5">
-              <p className="text-sm font-medium text-teal-800">Thank you — your result has been recorded anonymously.</p>
-            </div>
-          )}
         </div>
       )}
     </div>

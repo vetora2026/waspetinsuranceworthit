@@ -1,12 +1,5 @@
 {
   "name": "waspetinsuranceworthit",
   "compatibility_date": "2026-05-03",
-  "pages_build_output_dir": "./dist",
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "waspetinsuranceworthit-db",
-      "database_id": "d9df3f09-d3fb-40b7-ae82-8427ee335e62"
-    }
-  ]
+  "pages_build_output_dir": "./dist"
 }

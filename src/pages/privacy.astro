@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Privacy Policy — WasPetInsuranceWorthIt.com"
-  description="Privacy policy for WasPetInsuranceWorthIt.com. What the calculator does with your inputs, what the optional contribution button sends, and which cookies are involved."
+  description="Privacy policy for WasPetInsuranceWorthIt.com. Calculator inputs stay in your browser and are never transmitted or stored. Which cookies are involved and how Google AdSense fits in."
 >
   <article class="prose prose-gray max-w-none">
     <h1>Privacy Policy</h1>
@@ -13,47 +13,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>What the Calculator Does With Your Inputs</h2>
     <p>
       Every calculation on WasPetInsuranceWorthIt.com runs in your browser. When you enter your
-      pet's species, breed, age, spending range, and incident history, those values stay on your
-      device and the math is performed there. Nothing is sent to us automatically, and nothing is
-      saved between visits — closing or refreshing the page clears everything you entered.
+      pet's species, breed, age, spending range, incident history, and insurance status, those
+      values stay on your device and the math is performed there. Your inputs and your result are
+      not transmitted to us, not stored by us, and not logged by us. Pressing "Calculate" makes no
+      request to our server, there is no optional upload or contribution step, and there is no
+      database behind the calculator. Nothing is saved between visits
+      — closing or refreshing the page clears everything you entered.
+    </p>
+    <p>
+      We do not ask for and do not receive your name, email address, postal address, phone number,
+      IP address, or your pet's name in connection with the calculator. Because nothing is sent,
+      there is nothing for us to connect back to you.
     </p>
 
-    <h2>The Optional "Contribute My Result" Button</h2>
+    <h2>Server Logs</h2>
     <p>
-      There is one exception, and it only happens if you choose it. After the calculator shows
-      your result, it offers a button labelled <strong>"Contribute my result."</strong> If you
-      click that button — and only then — your answers are sent to our server and stored so we can
-      improve the calculator's assumptions. If you click "No thanks," or ignore the prompt
-      entirely, nothing is transmitted.
-    </p>
-    <p>If you do contribute, this is exactly what gets stored:</p>
-    <ul>
-      <li>Species (dog or cat) and breed</li>
-      <li>Your pet's current age and the age at which you acquired them</li>
-      <li>Your total vet spending range and largest single bill range (ranges, not exact amounts)</li>
-      <li>The approximate percentage of that spending that was routine care</li>
-      <li>Which major incident categories you selected</li>
-      <li>Whether you had insurance, and whether you said you would buy it again</li>
-      <li>The verdict the calculator produced and its dollar figure</li>
-      <li>A timestamp and a randomly generated submission ID</li>
-    </ul>
-    <p>
-      We also store a one-way SHA-256 hash of your IP address, salted with a fixed application-specific string. This is
-      used to detect duplicate or automated submissions. The raw IP address is not written to the
-      database, and the hash cannot be reversed back into an IP address by anyone reading the
-      stored data.
-    </p>
-    <p>
-      We do not ask for and do not store your name, email address, postal address, phone number,
-      or your pet's name. There is no way for us to connect a contributed result back to you.
-      Aggregate statistics derived from contributed results may be published on this site.
+      Like any website, this site is served by a hosting provider (Cloudflare). When your browser
+      requests a page, the hosting provider's infrastructure may record standard request
+      information such as the page requested, the time of the request, your IP address, and your
+      browser's user-agent string. This is ordinary web-server logging, it is handled by the
+      hosting provider under its own privacy policy, and it does not include anything you type
+      into the calculator. We do not use these logs to identify or profile individual visitors.
     </p>
 
     <h2>No Accounts, No Mailing Lists</h2>
     <p>
       There are no user accounts on this site. There is no sign-up, no login, no newsletter, and
-      no marketing list. We do not sell, rent, or share submitted data with insurance companies,
-      brokers, lead generators, or any other third party.
+      no marketing list. We have no visitor data to sell, rent, or share with insurance companies,
+      brokers, lead generators, or any other third party, and we do not do so.
     </p>
 
     <h2>Cookies Set By This Site</h2>
@@ -74,8 +61,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </a>. Google's use of advertising cookies is governed by its{' '}
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
         Privacy Policy
-      </a>. We do not receive the data Google collects through those cookies, and contributed
-      calculator results are never shared with Google or any advertiser.
+      </a>. We do not receive the data Google collects through those cookies, and because your
+      calculator inputs never leave your browser, they cannot be shared with Google or any
+      advertiser.
     </p>
 
     <h2>Changes to This Policy</h2>
