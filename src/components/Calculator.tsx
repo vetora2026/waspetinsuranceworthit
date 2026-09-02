@@ -243,7 +243,10 @@ export default function Calculator() {
   }
 
   function canAdvance1() {
-    return form.species && form.breed && form.ageNow !== '' && form.ageAcquired !== '';
+    if (!form.species || !form.breed || form.ageNow === '' || form.ageAcquired === '') return false;
+    // The "Age acquired must be less than or equal to current age" message is shown for this case;
+    // don't allow advancing past it.
+    return parseFloat(form.ageAcquired) <= parseFloat(form.ageNow);
   }
 
   function canAdvance2() {
@@ -339,7 +342,7 @@ export default function Calculator() {
                   }}
                   onFocus={() => setShowBreedList(true)}
                   onBlur={() => setTimeout(() => setShowBreedList(false), 150)}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
                 {showBreedList && (
                   <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-xl max-h-56 overflow-y-auto">
@@ -358,7 +361,7 @@ export default function Calculator() {
                                 setBreedSearch('');
                                 setShowBreedList(false);
                               }}
-                              className="w-full text-left px-4 py-2.5 text-sm hover:bg-teal-50 text-gray-800"
+                              className="w-full text-left px-4 py-3 text-sm hover:bg-teal-50 text-gray-800"
                             >
                               {b.name}
                             </button>
@@ -377,7 +380,7 @@ export default function Calculator() {
                             setBreedSearch('');
                             setShowBreedList(false);
                           }}
-                          className="w-full text-left px-4 py-2.5 text-sm hover:bg-teal-50 text-gray-800"
+                          className="w-full text-left px-4 py-3 text-sm hover:bg-teal-50 text-gray-800"
                         >
                           {b.name}
                           {'size' in b && (
@@ -408,7 +411,7 @@ export default function Calculator() {
                     value={form.ageNow}
                     onChange={(e) => setField('ageNow', e.target.value)}
                     placeholder="e.g. 5"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                 </div>
                 <div>
@@ -420,7 +423,7 @@ export default function Calculator() {
                     value={form.ageAcquired}
                     onChange={(e) => setField('ageAcquired', e.target.value)}
                     placeholder="e.g. 0"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                 </div>
               </div>
@@ -433,7 +436,7 @@ export default function Calculator() {
                   type="button"
                   onClick={() => setStep(2)}
                   disabled={!canAdvance1()}
-                  className="px-6 py-2.5 bg-teal-700 text-white rounded-lg font-medium text-sm disabled:opacity-40 hover:bg-teal-800 transition-colors"
+                  className="px-6 py-3 bg-teal-700 text-white rounded-lg font-medium text-sm disabled:opacity-40 hover:bg-teal-800 transition-colors"
                 >
                   Continue →
                 </button>
@@ -534,7 +537,7 @@ export default function Calculator() {
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
+                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
                 >
                   ← Back
                 </button>
@@ -542,7 +545,7 @@ export default function Calculator() {
                   type="button"
                   onClick={() => setStep(3)}
                   disabled={!canAdvance2()}
-                  className="px-6 py-2.5 bg-teal-700 text-white rounded-lg font-medium text-sm disabled:opacity-40 hover:bg-teal-800 transition-colors"
+                  className="px-6 py-3 bg-teal-700 text-white rounded-lg font-medium text-sm disabled:opacity-40 hover:bg-teal-800 transition-colors"
                 >
                   Continue →
                 </button>
@@ -591,7 +594,7 @@ export default function Calculator() {
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
+                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
                 >
                   ← Back
                 </button>
@@ -599,7 +602,7 @@ export default function Calculator() {
                   type="button"
                   onClick={handleCalculate}
                   disabled={!canSubmit()}
-                  className="px-8 py-2.5 bg-amber-600 text-white rounded-lg font-semibold text-sm disabled:opacity-40 hover:bg-amber-700 transition-colors"
+                  className="px-8 py-3 bg-amber-600 text-white rounded-lg font-semibold text-sm disabled:opacity-40 hover:bg-amber-700 transition-colors"
                 >
                   Calculate →
                 </button>

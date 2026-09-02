@@ -247,7 +247,7 @@ export default function Verdict({ result, breed, species, ageNow, lifeExpectancy
 
       {/* Charts — collapsible */}
       <details open className="group">
-        <summary className="flex items-center justify-between cursor-pointer py-2 list-none select-none">
+        <summary className="flex items-center justify-between cursor-pointer py-3.5 list-none select-none">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Detailed breed data</p>
           <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
