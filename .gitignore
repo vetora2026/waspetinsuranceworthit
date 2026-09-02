@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.playwright-mcp/
+.env
+.env.*
+.DS_Store

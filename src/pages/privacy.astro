@@ -4,56 +4,92 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Privacy Policy — WasPetInsuranceWorthIt.com"
-  description="Privacy policy for WasPetInsuranceWorthIt.com. We don't store your data."
+  description="Privacy policy for WasPetInsuranceWorthIt.com. What the calculator does with your inputs, what the optional contribution button sends, and which cookies are involved."
 >
   <article class="prose prose-gray max-w-none">
     <h1>Privacy Policy</h1>
-    <p class="text-sm text-gray-500">Last updated: May 2026</p>
+    <p class="text-sm text-gray-500">Last updated: September 2026</p>
 
-    <h2>No Data Collection</h2>
+    <h2>What the Calculator Does With Your Inputs</h2>
     <p>
-      All calculations on WasPetInsuranceWorthIt.com are performed entirely in your browser.
-      We do not transmit, store, or log any information you enter into the calculator — including
-      your pet's breed, age, or spending data. When you close or refresh the page, all entered
-      data is gone.
+      Every calculation on WasPetInsuranceWorthIt.com runs in your browser. When you enter your
+      pet's species, breed, age, spending range, and incident history, those values stay on your
+      device and the math is performed there. Nothing is sent to us automatically, and nothing is
+      saved between visits — closing or refreshing the page clears everything you entered.
+    </p>
+
+    <h2>The Optional "Contribute My Result" Button</h2>
+    <p>
+      There is one exception, and it only happens if you choose it. After the calculator shows
+      your result, it offers a button labelled <strong>"Contribute my result."</strong> If you
+      click that button — and only then — your answers are sent to our server and stored so we can
+      improve the calculator's assumptions. If you click "No thanks," or ignore the prompt
+      entirely, nothing is transmitted.
+    </p>
+    <p>If you do contribute, this is exactly what gets stored:</p>
+    <ul>
+      <li>Species (dog or cat) and breed</li>
+      <li>Your pet's current age and the age at which you acquired them</li>
+      <li>Your total vet spending range and largest single bill range (ranges, not exact amounts)</li>
+      <li>The approximate percentage of that spending that was routine care</li>
+      <li>Which major incident categories you selected</li>
+      <li>Whether you had insurance, and whether you said you would buy it again</li>
+      <li>The verdict the calculator produced and its dollar figure</li>
+      <li>A timestamp and a randomly generated submission ID</li>
+    </ul>
+    <p>
+      We also store a one-way SHA-256 hash of your IP address, salted with a fixed application-specific string. This is
+      used to detect duplicate or automated submissions. The raw IP address is not written to the
+      database, and the hash cannot be reversed back into an IP address by anyone reading the
+      stored data.
+    </p>
+    <p>
+      We do not ask for and do not store your name, email address, postal address, phone number,
+      or your pet's name. There is no way for us to connect a contributed result back to you.
+      Aggregate statistics derived from contributed results may be published on this site.
+    </p>
+
+    <h2>No Accounts, No Mailing Lists</h2>
+    <p>
+      There are no user accounts on this site. There is no sign-up, no login, no newsletter, and
+      no marketing list. We do not sell, rent, or share submitted data with insurance companies,
+      brokers, lead generators, or any other third party.
+    </p>
+
+    <h2>Cookies Set By This Site</h2>
+    <p>
+      This site sets no first-party cookies of its own. It does not use Google Analytics or any
+      other analytics or visitor-tracking service, and it does not use localStorage or similar
+      browser storage to remember you between visits.
     </p>
 
     <h2>Google AdSense</h2>
     <p>
-      This site uses Google AdSense to display advertisements. Google may use cookies to serve
-      ads based on your prior visits to this site or other websites. You can opt out of
+      This site uses Google AdSense to display advertisements. Google is a third party and may set
+      its own cookies to serve ads based on your prior visits to this site or other websites — this
+      is separate from the statement above, which covers only cookies set by us. You can opt out of
       personalized advertising by visiting{' '}
       <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">
         Google Ads Settings
       </a>. Google's use of advertising cookies is governed by its{' '}
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
         Privacy Policy
-      </a>.
+      </a>. We do not receive the data Google collects through those cookies, and contributed
+      calculator results are never shared with Google or any advertiser.
     </p>
 
-    <h2>Cookies</h2>
+    <h2>Changes to This Policy</h2>
     <p>
-      This site itself sets no first-party cookies. Google AdSense may set third-party cookies
-      as described above.
-    </p>
-
-    <h2>Future Features</h2>
-    <p>
-      If we add a feature allowing users to optionally submit anonymized results, the following
-      will apply: no personally identifiable information will be stored; IP addresses will be
-      hashed before storage; no email addresses or account information will be collected; and
-      aggregate anonymized statistics may be published.
-    </p>
-
-    <h2>No User Accounts</h2>
-    <p>
-      There are no user accounts, no email collection, and no newsletter or marketing lists
-      associated with this site.
+      If the site's behaviour changes — for example, if we add a feature that collects something
+      not listed above — this page will be updated to describe it before that feature ships, and
+      the "last updated" date at the top will change.
     </p>
 
     <h2>Contact</h2>
     <p>
-      Questions about this privacy policy: <!--email_off-->contact@waspetinsuranceworthit.com<!--/email_off-->
+      Questions about this privacy policy:
+      <!--email_off-->contact@waspetinsuranceworthit.com<!--/email_off-->. See the{' '}
+      <a href="/contact/">contact page</a> for more.
     </p>
   </article>
 </BaseLayout>
