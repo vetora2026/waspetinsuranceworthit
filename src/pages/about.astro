@@ -3,11 +3,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="How This Calculator Works — WasPetInsuranceWorthIt.com"
-  description="Full methodology, data sources, and assumptions behind the pet insurance worth-it calculator."
+  title="About & Methodology — WasPetInsuranceWorthIt.com"
+  description="Who runs WasPetInsuranceWorthIt.com, why it exists, what it does not do, and the full methodology, data sources, and assumptions behind the calculator."
 >
   <article class="prose prose-gray max-w-none">
-    <h1>How This Calculator Works</h1>
+    <h1>About This Site</h1>
+
+    <h2>Who Runs This Site</h2>
+    <p>
+      This site is built and maintained by one person. It is not owned by, funded by, or affiliated
+      with any pet insurer, insurance comparison marketplace, veterinary chain, or affiliate network.
+      There is no editorial team and no sales team. The only way to reach the site is by email:{' '}
+      <strong><!--email_off-->vetorainfo@gmail.com<!--/email_off--></strong>. See the{' '}
+      <a href="/contact/">contact page</a> for what kinds of messages get a reply.
+    </p>
+
+    <h2>Why It Exists</h2>
+    <p>
+      Pet insurance is usually sold on a forward-looking pitch: a single large vet bill could cost
+      thousands, so a monthly premium is cheap protection. That is a true statement about risk, but
+      it is not the question most owners actually ask after a few years of paying. The question is
+      retrospective: given this breed, this age, and what I actually spent at the vet, would a policy
+      have paid out more than it cost? That question has a numerical answer for any specific pet,
+      and the industry publishes enough aggregate data to estimate it. This site exists to run that
+      arithmetic and show the result, including the years where the answer is no.
+    </p>
+
+    <h2>What This Site Is Not</h2>
+    <ul>
+      <li>
+        <strong>It does not sell insurance.</strong> No quotes, no applications, no carrier
+        recommendations. Nothing here is insurance advice, and the site is not a licensed agent or
+        broker in any jurisdiction.
+      </li>
+      <li>
+        <strong>It receives no commissions from insurers.</strong> There are no affiliate links,
+        referral codes, sponsored placements, or paid rankings anywhere on the site. The site's only
+        revenue is Google AdSense display advertising. Those ad slots are filled by Google's
+        auction, not chosen by us, and an insurer appearing in one is not an endorsement.
+      </li>
+      <li>
+        <strong>It collects no visitor data.</strong> The calculator runs entirely inside your
+        browser. The breed tables, cost baselines, and policy defaults are bundled into the page
+        itself, so pressing Calculate makes no network request, and the site has no server-side API
+        to receive one. The site sets no cookies of its own and writes nothing to browser storage.
+        The only third-party script on any page is Google's AdSense loader, which is described on
+        the <a href="/privacy/">privacy page</a>.
+      </li>
+    </ul>
+
+    <h2>How This Calculator Works</h2>
+    <p>
+      Everything below documents where the numbers come from, what is calculated, and where the
+      estimate is weakest. If a figure on this page looks wrong, the corrections address above is
+      the right place to send it.
+    </p>
 
     <h2>Data Sources</h2>
     <ul>
