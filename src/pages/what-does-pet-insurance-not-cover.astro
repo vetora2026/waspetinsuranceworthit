@@ -82,7 +82,7 @@ const articleSchema = {
       <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Common exclusions across major carriers</h2>
 
       <div class="rounded-xl border border-gray-200 bg-white overflow-hidden mb-5">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Common exclusions across major carriers">
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b border-gray-100 bg-gray-50">
@@ -172,7 +172,7 @@ const articleSchema = {
       </p>
 
       <div class="rounded-xl border border-gray-200 bg-white overflow-hidden mb-4">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Standard waiting periods by carrier">
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b border-gray-100 bg-gray-50">
@@ -283,7 +283,7 @@ const articleSchema = {
         <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
           <summary class="flex justify-between items-center px-5 py-4 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors list-none">
             {item.q}
-            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
@@ -330,7 +330,7 @@ const articleSchema = {
       </div>
     </div>
 
-    <p class="text-xs text-gray-400 text-right">Last updated: May 2026 · Carrier waiting period data from individual provider websites</p>
+    <p class="text-xs text-gray-500 text-right">Last updated: May 2026 · Carrier waiting period data from individual provider websites</p>
 
   </article>
 </BaseLayout>

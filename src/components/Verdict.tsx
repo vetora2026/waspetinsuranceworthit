@@ -84,7 +84,7 @@ export default function Verdict({ result, breed, species, ageNow, hasInsurance }
             </span>
           </div>
         </div>
-        <p className="text-xs text-gray-400 pt-1">
+        <p className="text-xs text-gray-500 pt-1">
           Assumes a {fmt(policyDefaults.annualDeductible)} annual deductible applied in each year you
           reported a major incident (or once if none), {Math.round(policyDefaults.reimbursementRate * 100)}%
           reimbursement, {fmt(policyDefaults.annualLimit)} annual limit.
@@ -115,14 +115,14 @@ export default function Verdict({ result, breed, species, ageNow, hasInsurance }
           </p>
         )}
         {usedSpeciesAverage ? (
-          <p className="text-xs text-gray-400 mt-2">
+          <p className="text-xs text-gray-500 mt-2">
             Fewer than 30 {breed}s in the dataset at this age range, so this compares against all{' '}
             {speciesLabel} ({n.toLocaleString()} at this age range) instead.
           </p>
         ) : limitedData ? (
-          <p className="text-xs text-gray-400 mt-2">Based on limited data (n={n} pets at this age range)</p>
+          <p className="text-xs text-gray-500 mt-2">Based on limited data (n={n} pets at this age range)</p>
         ) : (
-          <p className="text-xs text-gray-400 mt-2">Based on {n.toLocaleString()} {breed}s in our dataset</p>
+          <p className="text-xs text-gray-500 mt-2">Based on {n.toLocaleString()} {breed}s in our dataset</p>
         )}
       </div>
     );

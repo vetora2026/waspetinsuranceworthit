@@ -346,7 +346,7 @@ export default function Calculator() {
                     {groupedDogBreeds ? (
                       groupedDogBreeds.map((group) => (
                         <div key={group.label}>
-                          <div className="px-4 py-1.5 text-xs font-semibold text-gray-400 uppercase tracking-wider bg-gray-50 sticky top-0">
+                          <div className="px-4 py-1.5 text-xs font-semibold text-gray-500 uppercase tracking-wider bg-gray-50 sticky top-0">
                             {group.label}
                           </div>
                           {group.items.map((b) => (
@@ -381,7 +381,7 @@ export default function Calculator() {
                         >
                           {b.name}
                           {'size' in b && (
-                            <span className="text-xs text-gray-400 ml-2">{(b as { name: string; size: string }).size}</span>
+                            <span className="text-xs text-gray-500 ml-2">{(b as { name: string; size: string }).size}</span>
                           )}
                         </button>
                       ))
@@ -599,7 +599,7 @@ export default function Calculator() {
         <div id="results-section" className="mt-10">
           {/* Input summary */}
           <div className="mb-6 bg-gray-50 border border-gray-200 rounded-xl p-4">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Your inputs</p>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Your inputs</p>
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-600">
               <span className="flex items-center gap-1.5 font-medium text-gray-800">
                 {form.species === 'dog' ? <DogIcon size={15} /> : <CatIcon size={15} />}
