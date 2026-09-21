@@ -13,9 +13,8 @@
  *
  * Exits non-zero on any failure. Runs as a postbuild hook.
  */
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { glob } from 'node:fs/promises';
 import path from 'node:path';
 
 const ORIGIN = 'https://waspetinsuranceworthit.com';
@@ -42,10 +41,18 @@ if (locs.length === 0) {
 const dupLocs = locs.filter((l, i) => locs.indexOf(l) !== i);
 for (const l of new Set(dupLocs)) fail('sitemap', `duplicate <loc> ${l}`);
 
-/** Collect dist/**\/index.html, sorted for stable output. */
-const files = [];
-for await (const entry of glob('**/index.html', { cwd: DIST })) files.push(entry);
-files.sort();
+/** Collect dist/**\/index.html as dist-relative posix paths, sorted for stable output. */
+async function findIndexHtml(dir, prefix = '') {
+  const out = [];
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const rel = prefix ? `${prefix}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) out.push(...(await findIndexHtml(path.join(dir, entry.name), rel)));
+    else if (entry.name === 'index.html') out.push(rel);
+  }
+  return out;
+}
+
+const files = (await findIndexHtml(DIST)).sort();
 
 if (files.length === 0) {
   console.error('check-canonical: no index.html files found under dist/.');
@@ -54,7 +61,7 @@ if (files.length === 0) {
 
 /** dist-relative "about/index.html" -> "https://origin/about/" */
 function urlForFile(rel) {
-  const dir = path.dirname(rel.split(path.sep).join('/'));
+  const dir = path.posix.dirname(rel);
   return dir === '.' ? `${ORIGIN}/` : `${ORIGIN}/${dir}/`;
 }
 
@@ -62,7 +69,7 @@ const seenInSitemap = new Set();
 const rows = [];
 
 for (const rel of files) {
-  const page = rel.split(path.sep).join('/');
+  const page = rel;
   const expected = urlForFile(rel);
   const html = await readFile(path.join(DIST, rel), 'utf8');
 
