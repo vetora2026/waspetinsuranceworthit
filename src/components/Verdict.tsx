@@ -1,32 +1,16 @@
 import type { CalculatorResult, Species } from '../lib/calculator';
-import { buildPremiumVsClaimsData, buildOutcomeDistribution } from '../lib/calculator';
-import naphia from '../data/naphia-baselines.json';
-import PremiumVsClaimsChart from './PremiumVsClaimsChart';
-import ClaimDistributionChart from './ClaimDistributionChart';
-import OutcomeDistributionChart from './OutcomeDistributionChart';
+import policyDefaults from '../data/policy-defaults.json';
 
 interface Props {
   result: CalculatorResult;
   breed: string;
   species: Species;
   ageNow: number;
-  lifeExpectancy: number;
   hasInsurance: boolean;
 }
 
 function fmt(n: number) {
   return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(Math.abs(n));
-}
-
-function ageBucket(age: number): string {
-  const y = Math.floor(age);
-  if (y <= 1)  return '0-1';
-  if (y <= 3)  return '2-3';
-  if (y <= 5)  return '4-5';
-  if (y <= 7)  return '6-7';
-  if (y <= 9)  return '8-9';
-  if (y <= 11) return '10-11';
-  return '12+';
 }
 
 function PawSVG({ size = 16, className = '' }: { size?: number; className?: string }) {
@@ -41,15 +25,8 @@ function PawSVG({ size = 16, className = '' }: { size?: number; className?: stri
   );
 }
 
-export default function Verdict({ result, breed, species, ageNow, lifeExpectancy, hasInsurance }: Props) {
-  const { totalPremiums, totalReimbursements, netResult, verdictBranch, isElderly, breedPercentile, yearsOwned } = result;
-
-  const basePremium =
-    (species === 'dog' ? naphia.dog.avgAnnualPremium : naphia.cat.avgAnnualPremium) *
-    naphia.premiumAdjustmentFactor;
-
-  const chartPoints = buildPremiumVsClaimsData({ species, breed }, lifeExpectancy, basePremium);
-  const outcomeData = buildOutcomeDistribution(breed, species, ageBucket(ageNow));
+export default function Verdict({ result, breed, species, ageNow, hasInsurance }: Props) {
+  const { totalPremiums, totalReimbursements, netResult, verdictBranch, isElderly, breedPercentile, yearsOwned, claimYears } = result;
 
   const isPositive = netResult > 200;
   const isNegative = netResult < -200;
@@ -108,7 +85,10 @@ export default function Verdict({ result, breed, species, ageNow, lifeExpectancy
           </div>
         </div>
         <p className="text-xs text-gray-400 pt-1">
-          Assumes $500 annual deductible, 80% reimbursement rate, $15,000 annual limit, no wellness rider.
+          Assumes a {fmt(policyDefaults.annualDeductible)} annual deductible applied in each year you
+          reported a major incident (or once if none), {Math.round(policyDefaults.reimbursementRate * 100)}%
+          reimbursement, {fmt(policyDefaults.annualLimit)} annual limit.
+          {' '}Applied across {claimYears} claim year{claimYears !== 1 ? 's' : ''}.
         </p>
       </div>
     );
@@ -116,16 +96,30 @@ export default function Verdict({ result, breed, species, ageNow, lifeExpectancy
 
   function BreedComparison() {
     if (!breedPercentile) return null;
-    const { userPercentile, n, limitedData, bucket } = breedPercentile;
+    const { userPercentile, n, limitedData, usedSpeciesAverage, bucket } = breedPercentile;
+    const speciesLabel = species === 'dog' ? 'dogs' : 'cats';
+
     return (
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
         <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Your pet vs. similar pets</h3>
-        <p className="text-sm text-gray-700">
-          Your reported vet spending puts <strong>{breed}</strong> in approximately the{' '}
-          <strong className="text-teal-700">{userPercentile}th percentile</strong> for vet costs
-          at age {bucket}.
-        </p>
-        {limitedData ? (
+        {userPercentile === null ? (
+          <p className="text-sm text-gray-700">
+            Not enough data for this breed and age to place your spending on a percentile.
+          </p>
+        ) : (
+          <p className="text-sm text-gray-700">
+            Your reported vet spending puts <strong>{breed}</strong> in approximately the{' '}
+            <strong className="text-teal-700">{userPercentile}th percentile</strong> for vet costs
+            at age {bucket}
+            {limitedData ? ' (small sample)' : ''}.
+          </p>
+        )}
+        {usedSpeciesAverage ? (
+          <p className="text-xs text-gray-400 mt-2">
+            Fewer than 30 {breed}s in the dataset at this age range, so this compares against all{' '}
+            {speciesLabel} ({n.toLocaleString()} at this age range) instead.
+          </p>
+        ) : limitedData ? (
           <p className="text-xs text-gray-400 mt-2">Based on limited data (n={n} pets at this age range)</p>
         ) : (
           <p className="text-xs text-gray-400 mt-2">Based on {n.toLocaleString()} {breed}s in our dataset</p>
@@ -236,6 +230,11 @@ export default function Verdict({ result, breed, species, ageNow, lifeExpectancy
 
   return (
     <div className="space-y-10">
+      <p className="text-xs text-gray-500 leading-relaxed">
+        Estimates for education only — not financial or insurance advice, and not a quote.
+        Assumptions and sources are on the{' '}
+        <a href="/about/" className="underline hover:text-gray-700">About page</a>.
+      </p>
       <HeroCard />
       <MathBreakdown />
       <ElderlyOverlay />
@@ -244,29 +243,6 @@ export default function Verdict({ result, breed, species, ageNow, lifeExpectancy
         <BranchContent />
       </div>
       <BreedComparison />
-
-      {/* Charts — collapsible */}
-      <details open className="group">
-        <summary className="flex items-center justify-between cursor-pointer py-3.5 list-none select-none">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Detailed breed data</p>
-          <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </summary>
-        <div className="space-y-6 pt-4">
-          <PremiumVsClaimsChart data={chartPoints} ageNow={ageNow} />
-          {breedPercentile && (
-            <ClaimDistributionChart
-              percentileData={breedPercentile}
-              breed={breed}
-              userAnnualSpend={Math.round(result.claimableSpend / result.yearsOwned)}
-            />
-          )}
-          {outcomeData.length > 0 && (
-            <OutcomeDistributionChart data={outcomeData} breed={breed} />
-          )}
-        </div>
-      </details>
     </div>
   );
 }

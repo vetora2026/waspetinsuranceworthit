@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import naphia from '../data/naphia-baselines.json';
+
+const dogMonthly = Math.round(naphia.dog.avgAnnualPremium / 12);
+const catMonthly = Math.round(naphia.cat.avgAnnualPremium / 12);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -130,7 +134,8 @@ const faqSchema = {
       <h2 class="text-2xl font-bold mb-4" style="color:#1B6B6D;">Age and the premium curve</h2>
       <p class="text-gray-700 leading-relaxed mb-6">
         Pet insurance premiums increase with age, and the curve is not linear — it accelerates.
-        Based on NAPHIA 2024 data and carrier pricing patterns:
+        Based on carrier pricing patterns and this site’s own age-premium assumptions — the age
+        curve is our assumption, not a published NAPHIA figure (see the <a href="/about/">About page</a>):
       </p>
 
       <div class="space-y-3 mb-6">
@@ -142,7 +147,8 @@ const faqSchema = {
           <div>
             <p class="text-gray-700 text-sm leading-relaxed">
               Lowest premiums. Broadest coverage. No medical history = no exclusions.
-              Premiums for dogs typically start at $35–$65/month for accident-and-illness.
+              Accident-and-illness cover averages around ${dogMonthly} a month for dogs and ${catMonthly}
+              for cats (NAPHIA 2024 averages); a puppy or kitten sits at the low end of that.
               This is the optimal window.
             </p>
           </div>

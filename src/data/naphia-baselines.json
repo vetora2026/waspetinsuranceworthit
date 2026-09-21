@@ -7,7 +7,5 @@
     "avgAnnualPremium": 386.47,
     "avgAnnualPremiumSource": "NAPHIA 2024"
   },
-  "lossRatio": 0.72,
-  "premiumAdjustmentFactor": 1.08,
-  "premiumAdjustmentNote": "Dataset premiums are ~5-10% below 2024 levels; 1.08x brings to current"
+  "lossRatio": 0.72
 }

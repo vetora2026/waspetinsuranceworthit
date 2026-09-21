@@ -15,7 +15,6 @@ interface FormState {
   largestBill: CalculatorInput['largestBill'] | '';
   incidents: string[];
   hasInsurance: boolean | null;
-  wouldBuyAgain: 'yes' | 'no' | 'unsure' | '';
 }
 
 const DOG_INCIDENTS = [
@@ -191,7 +190,6 @@ export default function Calculator() {
     largestBill: '',
     incidents: [],
     hasInsurance: null,
-    wouldBuyAgain: '',
   });
   const [result, setResult] = useState<ReturnType<typeof calculate> | null>(null);
   const [breedSearch, setBreedSearch] = useState('');
@@ -275,7 +273,6 @@ export default function Calculator() {
       largestBill: form.largestBill as CalculatorInput['largestBill'],
       incidents: form.incidents,
       hasInsurance: form.hasInsurance,
-      wouldBuyAgain: form.wouldBuyAgain || undefined,
     };
     const r = calculate(input);
     setResult(r);
@@ -575,21 +572,6 @@ export default function Calculator() {
                 </div>
               </div>
 
-              {form.hasInsurance === true && (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">Would you buy it again?</label>
-                  <RadioGroup
-                    options={[
-                      { value: 'yes' as const,    label: 'Yes' },
-                      { value: 'no' as const,     label: 'No' },
-                      { value: 'unsure' as const, label: 'Not sure' },
-                    ]}
-                    value={form.wouldBuyAgain}
-                    onChange={(v) => setField('wouldBuyAgain', v)}
-                  />
-                </div>
-              )}
-
               <div className="flex justify-between pt-2">
                 <button
                   type="button"
@@ -635,7 +617,6 @@ export default function Calculator() {
             breed={form.breed}
             species={form.species}
             ageNow={parseFloat(form.ageNow) || 0}
-            lifeExpectancy={selectedBreed?.lifeExpectancy ?? (form.species === 'dog' ? 12 : 14)}
             hasInsurance={form.hasInsurance ?? false}
           />
         </div>

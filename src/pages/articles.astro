@@ -1,5 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import naphia from '../data/naphia-baselines.json';
+
+const dogMonthly = Math.round(naphia.dog.avgAnnualPremium / 12);
+const catMonthly = Math.round(naphia.cat.avgAnnualPremium / 12);
+const lossRatioPct = Math.round(naphia.lossRatio * 100);
+const tenYearPremiums = 6000;
+const tenYearClaims = Math.round(tenYearPremiums * naphia.lossRatio);
+const tenYearNetCost = tenYearPremiums - tenYearClaims;
 ---
 
 <BaseLayout
@@ -30,13 +38,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
             Full premium reference by pet type, breed risk, deductible, and reimbursement level.
-            Includes the industry loss ratio comparison: pet insurance (60–72%) vs. auto (55–75%)
+            Includes the industry loss ratio comparison: pet insurance ({lossRatioPct}%) vs. auto (55–75%)
             vs. health (80% ACA minimum).
           </p>
           <div class="flex flex-wrap gap-3 text-xs text-gray-400">
-            <span>Dog: $35–$60/mo avg</span>
+            <span>Dog: ~${dogMonthly}/mo avg</span>
             <span>·</span>
-            <span>Cat: $20–$35/mo avg</span>
+            <span>Cat: ~${catMonthly}/mo avg</span>
             <span>·</span>
             <span>NAPHIA 2024 data</span>
           </div>
@@ -48,7 +56,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
             $50/month in savings accumulates $7,350 over 10 years at 4% APY. $50/month in
-            premiums returns $3,600–$4,300 in expected claims. Full side-by-side comparison
+            premiums returns about ${tenYearClaims.toLocaleString()} in expected claims. Full side-by-side comparison
             of both strategies, including the catastrophic-event timing problem.
           </p>
           <div class="flex flex-wrap gap-3 text-xs text-gray-400">
@@ -143,7 +151,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Most Expensive Dog Breeds to Insure — Top 15 by Lifetime Vet Costs (2026)
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            Some breeds cost 3–4× more in lifetime vet bills than others. See which breeds generate
+            Some breeds cost 2–3× more in lifetime vet bills than others. See which breeds generate
             the highest insurance claims, the specific conditions driving costs, and why premiums
             vary so dramatically across the breed spectrum.
           </p>

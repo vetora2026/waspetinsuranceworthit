@@ -5,7 +5,7 @@ import Calculator from '../components/Calculator';
 
 <BaseLayout
   title="Was Pet Insurance Worth It? — Honest Calculator"
-  description="Find out whether pet insurance was worth it for your specific pet. Uses data from 50,000 real pets and 210,000 claims. No sales pitch — just honest math."
+  description="Find out whether pet insurance was worth it for your specific pet. Compares your pet against 50,000 real pets; the verdict uses industry average premiums and your own inputs."
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -20,7 +20,7 @@ import Calculator from '../components/Calculator';
         "price": "0",
         "priceCurrency": "USD"
       },
-      "description": "Find out whether pet insurance was worth it for your specific pet. Uses real claim data from 50,000 pets and 210,000 claims."
+      "description": "Find out whether pet insurance was worth it for your specific pet. Compares your pet against 50,000 real pets; the verdict uses industry average premiums and your own inputs."
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -117,8 +117,8 @@ import Calculator from '../components/Calculator';
         </h1>
         <p class="text-gray-600 text-base leading-relaxed">
           Whether insurance made sense for <em>your</em> pet depends on breed, age, and what actually
-          happened at the vet. This calculator uses data from 50,000 real pets and 210,000 claims to
-          show you the math.
+          happened at the vet. This calculator compares your pet against 50,000 real pets; the verdict
+          uses industry average premiums and your own inputs.
         </p>
       </div>
     </div>
@@ -138,6 +138,13 @@ import Calculator from '../components/Calculator';
     </div>
 
   </section>
+
+  <!-- Advice disclaimer — visible above the fold, before the calculator -->
+  <p class="mb-6 text-sm text-gray-600 leading-relaxed">
+    Estimates for education only &mdash; not financial or insurance advice, and not a quote.
+    Assumptions and sources are on the <a href="/about/" class="underline hover:text-gray-900">About page</a>;
+    see also our <a href="/terms/" class="underline hover:text-gray-900">Terms &amp; Disclaimer</a>.
+  </p>
 
   <!-- Calculator -->
   <Calculator client:load />

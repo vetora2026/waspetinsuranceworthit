@@ -6,5 +6,17 @@
   "elderlyThresholds": {
     "dog": 13,
     "cat": 15
+  },
+  "agePremiumMultipliers": {
+    "source": "Site assumption; not a published NAPHIA figure",
+    "bands": [
+      { "maxAge": 1,   "multiplier": 0.85 },
+      { "maxAge": 3,   "multiplier": 0.95 },
+      { "maxAge": 5,   "multiplier": 1.05 },
+      { "maxAge": 7,   "multiplier": 1.20 },
+      { "maxAge": 9,   "multiplier": 1.40 },
+      { "maxAge": 11,  "multiplier": 1.60 },
+      { "maxAge": 999, "multiplier": 1.80 }
+    ]
   }
 }
